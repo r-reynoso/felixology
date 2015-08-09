@@ -8,7 +8,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-   <title>Índice de Masa Corporal</title>
+   <title>Registración</title>
    <meta name="description" content="">  
    <meta name="author" content="">
 
@@ -21,29 +21,17 @@
    <link rel="stylesheet" href="css/default.css">
    <link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
-   <link rel="stylesheet" href="css/alertify.default.css">
-   <link rel="stylesheet" href="css/alertify.core.css">
-   <link rel="stylesheet" href="css/alertify.bootstrap.css">
-   
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/prettyPhoto.css">
+
    <!-- Script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
-	<script src="js/fcalc.js"></script>
-	<script src="js/alertify.js"></script>
-	<script src="js/alertify.min.js"></script>
 
    <!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="favicon1.png" ></link>
-	
-   <!-- Style
-   =================================================== 
-   <style>
-		table.ex1 {
-			border-collapse: separate;
-			border-spacing: 60px 10px;
-		}
-   </style> -->
+
 </head>
 
 <body>
@@ -81,85 +69,97 @@
       </ul>
 
    </header> <!-- Header End -->
+
    
-      
-   <!-- Style Guide Section
+    <!-- Informacion Personal
    ================================================== -->
-   <section id="styles" style="padding: 90px 0 72px; background: #fff;">
-
-      <div class="row section-head">
-
-         <h1>Índice de Masa Corporal</h1>
-
-         <p>El Índice de Masa Corporal (IMC) provee una medida corpulencia 
-         basada en la altura y el peso tanto para los hombres como para las mujeres. El IMC es la 
-         relación entre el peso y el cuadrado de la altura, y se calcula dividiendo el peso en libras 
-         por la altura en pulgadas al cuadrado (IMC = peso/altura2). </p>                 
-
-      </div> <!-- Row End-->
-
-      <div class="row add-bottom">
-
-      	<hr> 
-
-        <div class="six columns add-bottom"> 
-         
-         	<form>            
-				<h4>Altura</h4>
- 					Pies:		<input type="text" id="pies">	
- 					Pulgadas:	<input type="text" id="pulgadas">		
- 			    <h4>Peso</h4>    
-			    	Libas:		<input type="text" id="libras">
-			    	
- 			   	<div><input type="button" value="Calcular    IMC" onClick="imc()"></div> 			
- 				<div><input type="reset" value="Borrar   datos"></div> 	 			     			 				 		    
-            </form>  
-            
-                        
-                          	                   
-        </div>
-        
-        <div class="six columns right">
-        
-        	<h4>Tabla de resultados:</h4> 
-        	<br>        	      
- 			<table class="spacing">
-  				<tr>
-  					<td><h6>IMC</h6></td>
-  					<td><h6>Estado del peso</h6></td>
-  				</tr>      			   			
-  				<tr>
-   					<td>Menor a 18.5</td>
-   					<td>Por debajo del peso</td>		
-    			</tr>
-    			<tr>
-   					<td>18.5 - 24.9</td>
-   					<td>Normal</td>		
-    			</tr>
-    			<tr>
-   					<td>25.0 - 29.9</td>
-   					<td>Por encima del peso</td>		
-    			</tr>
-    			<tr>
-   					<td>30.0 y superior</td>
-   					<td>Obesidad</td>		
-    			</tr>
-    			
-  			</table>
-  			<br>
-  			<br>
-  			<p>El índice de masa corporal no siempre es una forma precisa para decidir si
-        	 uno necesita o no bajar de peso. Si usted tiene más o menos músculo de lo normal,
-        	  su IMC puede no ser una medida perfecta de la cantidad de grasa corporal que tiene.
-        	</p>
-        </div> 
-               
-         	<hr>
-         
-     </div> <!-- Row End-->
-
+   <section id="features">
       
-   </section> <!-- Style Guide Section End-->
+      
+         <div class="row add-bottom">
+		 
+			<form class="form-horizontal">
+				<fieldset>
+
+				<!-- Form Name -->
+					<div class="row section-head">
+						<h2>Información Personal</h2>
+					</div>
+					
+					<hr>
+				<!-- Text input-->
+				<div class="six columns add-bottom"> 
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="nombre">Nombre</label>  
+					  <div class="col-md-4">
+					  <input id="nombre" name="nombre" type="text" placeholder="" class="form-control input-md" required="">
+						
+					  </div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="apellidopaterno">Apellido Paterno</label>  
+					  <div class="col-md-4">
+					  <input id="apellidopaterno" name="apellidopaterno" type="text" placeholder="" class="form-control input-md" required="">
+						
+					  </div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="apellidomaterno">Apellido Materno</label>  
+					  <div class="col-md-4">
+					  <input id="apellidomaterno" name="apellidomaterno" type="text" placeholder="" class="form-control input-md" required="">
+						
+					  </div>
+					</div>
+
+					<!-- Select Basic -->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="genero">Genero</label>
+					  <div class="col-md-4">
+						<select id="genero" name="genero" class="form-control">
+						  <option value="1">Masculino</option>
+						  <option value="2">Femenino</option>
+						</select>
+					  </div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="fechanacimiento">Fecha Nacimiento</label>  
+					  <div class="col-md-4">
+					  <input id="fechanacimiento" name="fechanacimiento" type="text" placeholder="" class="form-control input-md" required="">
+						
+					  </div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="estatura">Estatura</label>  
+					  <div class="col-md-4">
+					  <input id="estatura" name="estatura" type="text" placeholder="" class="form-control input-md" required="">
+					  <span class="help-block">Pies y pulgada</span>  
+					  </div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="peso">Peso</label>  
+					  <div class="col-md-4">
+					  <input id="peso" name="peso" type="text" placeholder="" class="form-control input-md" required="">
+					  <span class="help-block">Libras</span>  
+					  </div>
+					</div>
+				</div>
+				
+         </div>
+
+	 
+
+   </section> <!-- Homepage Hero end -->
+
    
    <!-- Footer
    ================================================== -->
@@ -215,15 +215,15 @@
 
          
 		 	
-         <div id="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#styles"><i class="icon-up-open"></i></a>
+        <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#features"><i class="icon-up-open"></i></a>
          </div>
 
       </div> <!-- Row End -->
 
-   </footer> <!-- Footer End-->
-   
-   
+   </footer> <!-- Footer End--> 
+
+
    <!-- Java Script
    ================================================== -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

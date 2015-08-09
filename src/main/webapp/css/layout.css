@@ -17,6 +17,7 @@
    i. Subscribe Section
    j. Footer
    k. lightbox
+   l. Table
 
    todo: check bug in mobile z-index
 
@@ -977,3 +978,11 @@ a#imagelightbox-close:hover, a#imagelightbox-close:focus { color: #11ABB0; }
 	}
 
 } 
+/* ------------------------------------------------------------------ */
+/* l. Table
+/* ------------------------------------------------------------------ */
+
+table.spacing {
+	border-collapse: separate;
+	border-spacing: 60px 10px;
+	}
