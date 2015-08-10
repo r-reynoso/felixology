@@ -10,7 +10,7 @@ function imc()
 	 				}
  				else if (isNaN(piesForm) || isNaN(pulgadasForm) || isNaN(librasForm))
  					{
-						alertify.alert("Todos los datos tiene que ser numericos!")
+						alertify.alert("Todos los datos tiene que ser numericos!");
  					}
 	 			else
 	 				{
