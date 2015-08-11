@@ -6,11 +6,11 @@ function imc()
  																						// validar si hay campos y si son numericos
  				if (piesForm == null || piesForm == "" || pulgadasForm == null || pulgadasForm == "" || librasForm == null || librasForm == "")
 	 				{
-	 					alertify.alert("Tienes que llenar todo los campos!");
+	 					alert1();                                                       // llamar funcion de alerta para llenar los camps
 	 				}
  				else if (isNaN(piesForm) || isNaN(pulgadasForm) || isNaN(librasForm))
  					{
-						alertify.alert("Todos los datos tiene que ser numericos!");
+						alert2();                                                       // llamar funcion de alerta que los campos son numericos
  					}
 	 			else
 	 				{
@@ -27,7 +27,20 @@ function imc()
 	 				}
  				
  		}
-function igchombre()
+
+function alert1()
+		{
+			alertify.alert("Tienes que llenar todo los campos!");
+		}
+
+function alert2()
+		{
+			alertify.alert("Todos los datos tiene que ser numericos!");
+		}
+
+
+
+/*function igchombre()
 		{
 			var librasForm = document.getElementById('libras').value;					// busca valor del textbox
 			var cinturaFrom = document.getElementById('cintura').vaule;
@@ -49,4 +62,4 @@ function igchombre()
 		 			var resultado2 = cintura * 4.15;
 					}						
 						
-		}
+		} */
