@@ -1,6 +1,6 @@
 <?php
 // we connect to localhost
-$link = mysql_connect('localhost', 'rayaera', 'Maricela1765');
+$link = mysql_connect('mysqlcluster11', 'rayaera', 'Maricela1765');
 if (!$link) {
     die('Could not connect: ' . mysql_error());
 }
