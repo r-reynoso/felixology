@@ -1,6 +1,5 @@
 <?php
-function databaseconnect()
-{
+
 	$servername = "localhost";
 	$username = "username";
 	$password = "password";
@@ -11,7 +10,8 @@ function databaseconnect()
 	if (!$conn)																// Check connection
 		{
 		    die("Connection failed: " . mysqli_connect_error());
+		    echo "Did Not Connect successfully";
 		}
 	echo "Connected successfully";
-}	
+	
 ?>
