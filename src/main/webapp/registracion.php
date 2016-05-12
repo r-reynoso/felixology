@@ -3,6 +3,23 @@
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+
+<?php
+	 
+		$servername = "10.30.84.161";
+		$username = "rayaera";
+		$password = "Maricela1765";		
+		
+		$conn = mysqli_connect($servername, $username, $password);              // Create connection
+			
+		if (!$conn)																// Check connection
+		{
+			echo "Did Not Connect successfully";
+			die(" Connection failed: " . mysqli_connect_error());
+		}
+		
+?>
+
 <head>
 
    <!--- Basic Page Needs
@@ -27,7 +44,7 @@
    <!-- Script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
-
+	
    <!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="favicon1.png" ></link>
@@ -82,23 +99,7 @@
 			
 							 						
 				<fieldset>
-				<?php
 				
-					$servername = "10.30.84.161";
-					$username = "rayaera";
-					$password = "1234";
-					
-					
-					$conn = mysqli_connect($servername, $username, $password);              // Create connection
-						
-					if (!$conn)																// Check connection
-						{
-							echo "Did Not Connect successfully";
-							die("Connection failed: " . mysqli_connect_error());
-						}
-					echo "Connected successfully";
-					
-				?>
 				<!-- Form Name -->
 					<div class="row section-head">
 						<h2>Información Personal</h2>
@@ -337,7 +338,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="singlebutton"></label>
 					  <div class="col-md-4">
-					    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" onClick="databaseconnect()">Registrar</button>
+					    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" onClick="">Registrar</button>
 					  </div>
 					</div>
 														
