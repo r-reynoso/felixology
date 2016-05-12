@@ -93,8 +93,8 @@
 						
 					if (!$conn)																// Check connection
 						{
-						    die("Connection failed: " . mysqli_connect_error());
-						    echo "Did Not Connect successfully";
+							echo "Did Not Connect successfully";
+							die("Connection failed: " . mysqli_connect_error());
 						}
 					echo "Connected successfully";
 					
