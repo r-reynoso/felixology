@@ -78,11 +78,27 @@
       
          <div class="row add-bottom">
 		
-			<form class="form-horizontal" action="" method="">
+			<form class="form-horizontal" action="" method="post">
 			
 							 						
 				<fieldset>
-
+				<?php
+				
+					$servername = "10.30.84.161";
+					$username = "rayaera";
+					$password = "Maricela1765";
+					
+					
+					$conn = mysqli_connect($servername, $username, $password);              // Create connection
+						
+					if (!$conn)																// Check connection
+						{
+						    die("Connection failed: " . mysqli_connect_error());
+						    echo "Did Not Connect successfully";
+						}
+					echo "Connected successfully";
+					
+				?>
 				<!-- Form Name -->
 					<div class="row section-head">
 						<h2>Información Personal</h2>
