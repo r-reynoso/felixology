@@ -86,7 +86,7 @@
 				
 					$servername = "10.30.84.161";
 					$username = "rayaera";
-					$password = "";
+					$password = "1234";
 					
 					
 					$conn = mysqli_connect($servername, $username, $password);              // Create connection
