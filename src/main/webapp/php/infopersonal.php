@@ -1,9 +1,17 @@
 <?php
-// we connect to localhost
-$link = mysql_connect('mysqlcluster11', 'rayaera', 'Maricela1765');
-if (!$link) {
-    die('Could not connect: ' . mysql_error());
-}
-echo 'Connected successfully';
-mysql_close($link);
+function databaseconnect()
+{
+	$servername = "localhost";
+	$username = "username";
+	$password = "password";
+	
+	
+	$conn = mysqli_connect($servername, $username, $password);              // Create connection
+		
+	if (!$conn)																// Check connection
+		{
+		    die("Connection failed: " . mysqli_connect_error());
+		}
+	echo "Connected successfully";
+}	
 ?>
