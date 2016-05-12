@@ -1,3 +1,18 @@
+<?php
+						$servername = "10.30.84.161";
+						$username = "rayaera";
+						$password = "Maricela1765";
+	
+	
+						$conn = mysqli_connect($servername, $username, $password);      // Create connection
+		
+						if (!$conn)														// Check connection
+								{
+		   							 die("Connection failed: " . mysqli_connect_error());
+		    					     		 echo "Did Not Connect successfully";
+								}	
+						echo "Connected successfully";
+?>	
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
@@ -80,22 +95,7 @@
 		
 			<form class="form-horizontal">
 			
-<?php
-						$servername = "localhost";
-						$username = "username";
-						$password = "password";
-	
-	
-						$conn = mysqli_connect($servername, $username, $password);              		// Create connection
-		
-						if (!$conn)										// Check connection
-								{
-		   							 die("Connection failed: " . mysqli_connect_error());
-		    					     		 echo "Did Not Connect successfully";
-								}	
-						echo "Connected successfully";
-	
-			 						
+							 						
 				<fieldset>
 
 				<!-- Form Name -->
@@ -339,7 +339,7 @@
 					    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" onClick="databaseconnect()">Registrar</button>
 					  </div>
 					</div>
-?>														
+														
 					<p>Al registrarse, usted está de acuerdo con los Términos de Servicio y Política de Privacidad,
 					incluyendo Cookies Uso. Otros serán capaces de encontrar usted por correo electrónico o número
 					de teléfono cuando proporcionado .</p>
