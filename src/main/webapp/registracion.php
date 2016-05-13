@@ -4,6 +4,7 @@
 <!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 
+<!-- Database connection script -->>
 <?php
 	 
 		$servername = "10.30.84.161";
@@ -95,7 +96,7 @@
       
          <div class="row add-bottom">
 		
-			<form class="form-horizontal" action="" method="post">
+			<form class="form-horizontal" action="upload.php" method="post">
 			
 							 						
 				<fieldset>
@@ -328,12 +329,12 @@
 					    
 					  </div>
 					</div>
-					
+									
 					<!-- File Button --> 
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="filebutton">Seleccionar Foto</label>
 					  <div class="col-md-4">
-					    <input id="filebutton" name="filebutton" class="input-file" type="file">
+					    <input type="file" id="" name="" accept="image/gif, image/jpeg, image/png, image/jpg, image/tif">
 					  </div>
 					</div>
 					

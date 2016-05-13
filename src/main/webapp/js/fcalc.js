@@ -37,9 +37,6 @@ function alert2()
 		{
 			alertify.alert("Todos los datos tiene que ser numericos!");
 		}
-
-
-
 /*function igchombre()
 		{
 			var librasForm = document.getElementById('libras').value;					// busca valor del textbox
