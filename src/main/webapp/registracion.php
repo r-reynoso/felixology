@@ -4,23 +4,6 @@
 <!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 
-<!-- Database connection script -->>
-<?php
-	 
-		$servername = "10.30.84.161";
-		$username = "rayaera";
-		$password = "Maricela1765";		
-		
-		$conn = mysqli_connect($servername, $username, $password);              // Create connection
-			
-		if (!$conn)																// Check connection
-		{
-			echo "Did Not Connect successfully";
-			die(" Connection failed: " . mysqli_connect_error());
-		}
-		
-?>
-
 <head>
 
    <!--- Basic Page Needs
@@ -96,7 +79,7 @@
       
          <div class="row add-bottom">
 		
-			<form class="form-horizontal" action="upload.php" method="post">
+			<form class="form-horizontal" action="php/registracion.php" method="post">
 			
 							 						
 				<fieldset>
@@ -110,7 +93,7 @@
 				
 				
 				<!-- Text input-->
-				<div class="six columns add-bottom"> 
+	  			<div class="six columns add-bottom">          
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="nombre">Nombre</label>  
 					  <div class="col-md-4">
@@ -119,14 +102,14 @@
 					  </div>
 					</div>
 
-					<!-- Text input-->
+	  				<!-- Text input-->               
 					<div class="form-group">
-					  <label class="col-md-4 control-label" for="apellidopaterno">Apellido Paterno</label>  
+					  <label class="col-md-4 control-label" for="apellidopaterno">Apellido Paterno</label>
 					  <div class="col-md-4">
 					  <input id="apellidopaterno" name="apellidopaterno" type="text" placeholder="" class="form-control input-md" required="">
 						
 					  </div>
-					</div>
+					</div> 
 
 					<!-- Text input-->
 					<div class="form-group">
@@ -193,7 +176,6 @@
 					  <label class="col-md-4 control-label" for="email">E-mail</label>  
 					  <div class="col-md-4">
 					  <input id="email" name="email" type="text" placeholder="" class="form-control input-md" required="">
-					    
 					  </div>
 					</div>
 					
@@ -334,7 +316,15 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="filebutton">Seleccionar Foto</label>
 					  <div class="col-md-4">
-					    <input type="file" id="" name="" accept="image/gif, image/jpeg, image/png, image/jpg, image/tif">
+					    <input type="file" onchange="loadFile(event)" accept="image/*">
+					    <img id="imagen"/>
+						    <script>
+								var loadFile = function(event)
+								  {
+								    var output = document.getElementById('imagen');
+								    output.src = URL.createObjectURL(event.target.files[0]);
+								  };
+							</script>
 					  </div>
 					</div>
 					
@@ -342,7 +332,7 @@
 					<br>
 					<br>
 					<br>
-														
+													
 					<!-- Button -->
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="singlebutton"></label>
