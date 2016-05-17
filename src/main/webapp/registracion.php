@@ -145,9 +145,9 @@
 					  <label class="col-md-4 control-label" for="estatura">Estatura</label>  
 					  <div class="col-md-4">
 					  <span class="help-block">Pies:</span>
-					  <input id="pies" name="pies" type="text" placeholder="" class="form-control input-md" required="">
+					  <input id="pies" name="pies" type="number" min="3" max="8" class="form-control input-md" required placeholder ="Apuntar pies entre 3 - 8.">
 					  <span class="help-block">Pulgadas:</span>
-					  <input id="pulgadas" name="pulgadas" type="text" placeholder="" class="form-control input-md" required="">					    
+					  <input id="pulgadas" name="pulgadas" type="number" min="0" max="11" class="form-control input-md" required placeholder="Apuntar pulgadas entre 0 - 11.">					    
 					  </div>
 					</div>
 
@@ -164,7 +164,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="email">E-mail</label>  
 					  <div class="col-md-4">
-					  <input id="email" name="email" type="text" class="form-control input-md" required="">
+					  <input id="email" name="email" type="email"  class="form-control input-md" required placeholder="Entrar un email valido.">
 					  </div>
 					</div>
 					
