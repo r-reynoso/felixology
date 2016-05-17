@@ -79,28 +79,28 @@
       
          <div class="row add-bottom">
 		
-			<form class="form-horizontal" action="php/registracion.php" method="post">
+			<form class="form-horizontal" action="php/dbregistracion.php" method="post">
 			
 							 						
 				<fieldset>
 				
-				<!-- Form Name -->
-					<div class="row section-head">
+    				<!-- Form Name --> 
+	  				<div class="row section-head">              
 						<h2>Información Personal</h2>
 					</div>
 					
-					<hr>
+					<hr>         
 				
 				
 				<!-- Text input-->
-	  			<div class="six columns add-bottom">          
+		  			<div class="six columns add-bottom">          
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="nombre">Nombre</label>  
 					  <div class="col-md-4">
 					  <input id="nombre" name="nombre" type="text" placeholder="" class="form-control input-md" required="">
 						
 					  </div>
-					</div>
+					</div>                                    
 
 	  				<!-- Text input-->               
 					<div class="form-group">
@@ -125,8 +125,8 @@
 					  <label class="col-md-4 control-label" for="genero">Genero</label>
 					  <div class="col-md-4">
 						<select id="genero" name="genero" class="form-control">
-						  <option value="1">Masculino</option>
-						  <option value="2">Femenino</option>
+						  <option value="Masculino">Masculino</option>
+						  <option value="Femenino">Femenino</option>
 						</select>
 					  </div>
 					</div>
@@ -146,8 +146,8 @@
 					  <div class="col-md-4">
 					  <span class="help-block">Pies:</span>
 					  <input id="pies" name="pies" type="text" placeholder="" class="form-control input-md" required="">
-					  <span class="help-block">Pulgada:</span>
-					  <input id="pulgada" name="pulgada" type="text" placeholder="" class="form-control input-md" required="">					    
+					  <span class="help-block">Pulgadas:</span>
+					  <input id="pulgadas" name="pulgadas" type="text" placeholder="" class="form-control input-md" required="">					    
 					  </div>
 					</div>
 
@@ -160,22 +160,11 @@
 					  </div>
 					</div>
 					
-					<!-- Textarea -->
-					<div class="form-group">
-  					  <label class="col-md-4 control-label" for="metas">¿Cuál es tu meta de mejoramiento físico?</label>
-  					  <div class="col-md-4">                     
-   					  <textarea class="form-control" id="metas" name="metas"></textarea>
-  					  </div>
-					</div>
-										
-				</div>
-				
-				<div class="six columns add-bottom">
 					<!-- Text input-->
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="email">E-mail</label>  
 					  <div class="col-md-4">
-					  <input id="email" name="email" type="text" placeholder="" class="form-control input-md" required="">
+					  <input id="email" name="email" type="text" class="form-control input-md" required="">
 					  </div>
 					</div>
 					
@@ -184,10 +173,12 @@
 					  <label class="col-md-4 control-label" for="password">Password</label>
 					  <div class="col-md-4">
 					    <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
-					    
 					  </div>
 					</div>
-					
+						
+				</div>
+				
+    			<div class="six columns add-bottom">
 					<!-- Text input-->
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="telefono">Telefono</label>  
@@ -202,7 +193,6 @@
 					  <label class="col-md-4 control-label" for="direccion">Dirección Física</label>  
 					  <div class="col-md-4">
 					  <input id="direccion" name="direccion" type="text" placeholder="" class="form-control input-md" required="">
-					    
 					  </div>
 					</div>
 					
@@ -211,84 +201,84 @@
 					  <label class="col-md-4 control-label" for="pueblo">Pueblo</label>
 					  <div class="col-md-4">
 					    <select id="pueblo" name="pueblo" class="form-control">
-					      <option value="1">Adjuntas</option>
-					      <option value="2">Aguada</option>
-					      <option value="3">Aguadilla</option>
-					      <option value="4">Aguas Buenas</option>
-					      <option value="5">Aibonito</option>
-					      <option value="6">Añasco</option>
-					      <option value="7">Arecibo</option>
-					      <option value="8">Arroyo</option>
-					      <option value="9">Barceloneta</option>
-					      <option value="10">Barranquitas</option>
-					      <option value="11">Bayamón</option>
-					      <option value="12">Cabo Rojo</option>
-					      <option value="13">Caguas</option>
-					      <option value="14">Camuy</option>
-					      <option value="15">Canóvanas</option>
-					      <option value="16">Carolina</option>
-					      <option value="17">Cataño</option>
-					      <option value="18">Cayey</option>
-					      <option value="19">Ceiba</option>
-					      <option value="20">Ciales</option>
-					      <option value="21">Cidra</option>
-					      <option value="22">Coamo</option>
-					      <option value="23">Comerío</option>
-					      <option value="24">Corozal</option>
-					      <option value="25">Culebra</option>
-					      <option value="26">Dorado</option>
-					      <option value="27">Fajardo</option>
-					      <option value="28">Florida</option>
-					      <option value="29">Guánica</option>
-					      <option value="30">Guayama</option>
-					      <option value="31">Guayanilla</option>
-					      <option value="32">Guaynabo</option>
-					      <option value="33">Gurabo</option>
-					      <option value="34">Hatillo</option>
-					      <option value="35">Hormigueros</option>
-					      <option value="36">Humacao</option>
-					      <option value="37">Isabela</option>
-					      <option value="38">Jayuya</option>
-					      <option value="39">Juana Díaz</option>
-					      <option value="40">Juncos</option>
-					      <option value="41">Lajas</option>
-					      <option value="42">Lares</option>
-					      <option value="43">Las Marías</option>
-					      <option value="44">Las Piedras</option>
-					      <option value="45">Loíza</option>
-					      <option value="46">Luquillo</option>
-					      <option value="47">Manatí</option>
-					      <option value="48">Maricao</option>
-					      <option value="49">Maunabo</option>
-					      <option value="50">Mayagüez</option>
-					      <option value="51">Moca</option>
-					      <option value="52">Morovis</option>
-					      <option value="53">Naguabo</option>
-					      <option value="54">Naranjito</option>
-					      <option value="55">Orocovis</option>
-					      <option value="56">Patillas</option>
-					      <option value="57">Peñuelas</option>
-					      <option value="58">Ponce</option>
-					      <option value="59">Quebradillas</option>
-					      <option value="60">Rincón</option>
-					      <option value="61">Río Grande</option>
-					      <option value="62">Sabana Grande</option>
-					      <option value="63">Salinas</option>
-					      <option value="64">San Germán</option>
-					      <option value="65">San Juan</option>
-					      <option value="66">San Lorenzo</option>
-					      <option value="67">San Sebastián</option>
-					      <option value="68">Santa Isabel</option>
-					      <option value="69">Toa Alta</option>
-					      <option value="70">Toa Baja</option>
-					      <option value="71">Trujillo Alto</option>
-					      <option value="72">Utuado</option>
-					      <option value="73">Vega Alta</option>
-					      <option value="74">Vega Baja</option>
-					      <option value="75">Vieques</option>
-					      <option value="76">Villalba</option>
-					      <option value="77">Yabucoa</option>
-					      <option value="78">Yauco</option>
+					      <option value="Adjuntas">Adjuntas</option>
+					      <option value="Aguada">Aguada</option>
+					      <option value="Aguadilla">Aguadilla</option>
+					      <option value="Aguas Buenas">Aguas Buenas</option>
+					      <option value="Aibonito">Aibonito</option>
+					      <option value="Añasco">Añasco</option>
+					      <option value="Arecibo">Arecibo</option>
+					      <option value="Arroyo">Arroyo</option>
+					      <option value="Barceloneta">Barceloneta</option>
+					      <option value="Barranquitas">Barranquitas</option>
+					      <option value="Bayamón">Bayamón</option>
+					      <option value="Cabo Rojo">Cabo Rojo</option>
+					      <option value="Caguas">Caguas</option>
+					      <option value="Camuy">Camuy</option>
+					      <option value="Canóvanas">Canóvanas</option>
+					      <option value="Carolina">Carolina</option>
+					      <option value="Cataño">Cataño</option>
+					      <option value="Cayey">Cayey</option>
+					      <option value="Ceiba">Ceiba</option>
+					      <option value="Ciales">Ciales</option>
+					      <option value="Cidra">Cidra</option>
+					      <option value="Coamo">Coamo</option>
+					      <option value="Comerío">Comerío</option>
+					      <option value="Corozal">Corozal</option>
+					      <option value="Culebra">Culebra</option>
+					      <option value="Dorado">Dorado</option>
+					      <option value="Fajardo">Fajardo</option>
+					      <option value="Florida">Florida</option>
+					      <option value="Guánica">Guánica</option>
+					      <option value="Guayama">Guayama</option>
+					      <option value="Guayanilla">Guayanilla</option>
+					      <option value="Guaynabo">Guaynabo</option>
+					      <option value="Gurabo">Gurabo</option>
+					      <option value="Hatillo">Hatillo</option>
+					      <option value="Hormigueros">Hormigueros</option>
+					      <option value="Humacao">Humacao</option>
+					      <option value="Isabela">Isabela</option>
+					      <option value="Jayuya">Jayuya</option>
+					      <option value="Juana Díaz">Juana Díaz</option>
+					      <option value="Juncos">Juncos</option>
+					      <option value="Lajas">Lajas</option>
+					      <option value="Lares">Lares</option>
+					      <option value="Las Marías">Las Marías</option>
+					      <option value="Las Piedras">Las Piedras</option>
+					      <option value="Loíza">Loíza</option>
+					      <option value="Luquillo">Luquillo</option>
+					      <option value="Manatí">Manatí</option>
+					      <option value="Maricao">Maricao</option>
+					      <option value="Maunabo">Maunabo</option>
+					      <option value="Mayagüez">Mayagüez</option>
+					      <option value="Moca">Moca</option>
+					      <option value="Morovis">Morovis</option>
+					      <option value="Naguabo">Naguabo</option>
+					      <option value="Naranjito">Naranjito</option>
+					      <option value="Orocovis">Orocovis</option>
+					      <option value="Patillas">Patillas</option>
+					      <option value="Peñuelas">Peñuelas</option>
+					      <option value="Ponce">Ponce</option>
+					      <option value="Quebradillas">Quebradillas</option>
+					      <option value="Rincón">Rincón</option>
+					      <option value="Río Grande">Río Grande</option>
+					      <option value="Sabana Grande">Sabana Grande</option>
+					      <option value="Salinas">Salinas</option>
+					      <option value="San Germán">San Germán</option>
+					      <option value="San Juan">San Juan</option>
+					      <option value="San Lorenzo">San Lorenzo</option>
+					      <option value="San Sebastián">San Sebastián</option>
+					      <option value="Santa Isabel">Santa Isabel</option>
+					      <option value="Toa Alta">Toa Alta</option>
+					      <option value="Toa Baja">Toa Baja</option>
+					      <option value="Trujillo Alto">Trujillo Alto</option>
+					      <option value="Utuado">Utuado</option>
+					      <option value="Vega Alta">Vega Alta</option>
+					      <option value="Vega Baja">Vega Baja</option>
+					      <option value="Vieques">Vieques</option>
+					      <option value="Villalba">Villalba</option>
+					      <option value="Yabucoa">Yabucoa</option>
+					      <option value="Yauco">Yauco</option>
 					    </select>
 					  </div>
 					</div>
@@ -298,7 +288,7 @@
 					  <label class="col-md-4 control-label" for="estado">Estado</label>
 					  <div class="col-md-4">
 					    <select id="estado" name="estado" class="form-control">
-					      <option value="1">Puerto Rico</option>
+					      <option value="Puerto Rico">Puerto Rico</option>
 					    </select>
 					  </div>
 					</div>
@@ -313,10 +303,10 @@
 					</div>
 									
 					<!-- File Button --> 
-					<div class="form-group">
+   					<div class="form-group">
 					  <label class="col-md-4 control-label" for="filebutton">Seleccionar Foto</label>
 					  <div class="col-md-4">
-					    <input type="file" onchange="loadFile(event)" accept="image/*">
+					    <input type="file" name="imagen" onchange="loadFile(event)" accept="image/*" required="">
 					    <img id="imagen"/>
 						    <script>
 								var loadFile = function(event)
@@ -337,7 +327,8 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="singlebutton"></label>
 					  <div class="col-md-4">
-					    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" onClick="">Registrar</button>
+					    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Submit">Registrar</button>
+					    <input type="reset" value="Borrar datos">
 					  </div>
 					</div>
 														
