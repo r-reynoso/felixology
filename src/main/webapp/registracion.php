@@ -97,7 +97,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="nombre">Nombre</label>  
 					  <div class="col-md-4">
-					  <input id="nombre" name="nombre" type="text" placeholder="" class="form-control input-md" required="">
+					  <input id="nombre" name="nombre" type="text" class="form-control input-md" required="">
 						
 					  </div>
 					</div>                                    
@@ -106,7 +106,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="apellidopaterno">Apellido Paterno</label>
 					  <div class="col-md-4">
-					  <input id="apellidopaterno" name="apellidopaterno" type="text" placeholder="" class="form-control input-md" required="">
+					  <input id="apellidopaterno" name="apellidopaterno" type="text" class="form-control input-md" required="">
 						
 					  </div>
 					</div> 
@@ -115,7 +115,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="apellidomaterno">Apellido Materno</label>  
 					  <div class="col-md-4">
-					  <input id="apellidomaterno" name="apellidomaterno" type="text" placeholder="" class="form-control input-md" required="">
+					  <input id="apellidomaterno" name="apellidomaterno" type="text" class="form-control input-md" required="">
 						
 					  </div>
 					</div>
@@ -135,7 +135,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="fechanacimiento">Fecha Nacimiento</label>  
 					  <div class="col-md-4">
-					  <input id="fechanacimiento" name="fechanacimiento" type="text" placeholder="" class="form-control input-md" required="">
+					  <input id="fechanacimiento" name="fechanacimiento" type="text" class="form-control input-md" required="">
 						
 					  </div>
 					</div>
@@ -145,9 +145,9 @@
 					  <label class="col-md-4 control-label" for="estatura">Estatura</label>  
 					  <div class="col-md-4">
 					  <span class="help-block">Pies:</span>
-					  <input id="pies" name="pies" type="number" min="3" max="8" class="form-control input-md" required placeholder ="Apuntar pies entre 3 - 8.">
+					  <input id="pies" name="pies" type="text" class="form-control input-md" required="">
 					  <span class="help-block">Pulgadas:</span>
-					  <input id="pulgadas" name="pulgadas" type="number" min="0" max="11" class="form-control input-md" required placeholder="Apuntar pulgadas entre 0 - 11.">					    
+					  <input id="pulgadas" name="pulgadas" type="text" class="form-control input-md" required="">					    
 					  </div>
 					</div>
 
@@ -156,7 +156,7 @@
 					  <label class="col-md-4 control-label" for="peso">Peso</label>  
 					  <div class="col-md-4">
 					  <span class="help-block">Libras:</span>
-					  <input id="peso" name="peso" type="text" placeholder="" class="form-control input-md" required="">
+					  <input id="peso" name="peso" type="text" class="form-control input-md" required="">
 					  </div>
 					</div>
 					
@@ -164,7 +164,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="email">E-mail</label>  
 					  <div class="col-md-4">
-					  <input id="email" name="email" type="email"  class="form-control input-md" required placeholder="Entrar un email valido.">
+					  <input id="email" name="email" type="email" class="form-control input-md" required="">
 					  </div>
 					</div>
 					
@@ -172,7 +172,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="password">Password</label>
 					  <div class="col-md-4">
-					    <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
+					    <input id="password" name="password" type="password" class="form-control input-md" required="">
 					  </div>
 					</div>
 						
@@ -183,7 +183,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="telefono">Telefono</label>  
 					  <div class="col-md-4">
-					  <input id="telefono" name="telefono" type="text" placeholder="" class="form-control input-md" required="">
+					  <input id="telefono" name="telefono" type="tel" placeholder="" class="form-control input-md" required="">
 					    
 					  </div>
 					</div>
