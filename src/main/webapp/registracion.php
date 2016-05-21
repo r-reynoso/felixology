@@ -97,7 +97,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="nombre">Nombre</label>  
 					  <div class="col-md-4">
-					  <input id="nombre" name="nombre" type="text" class="form-control input-md" required="">
+					  <input id="nombre" name="nombre" type="text" pattern="[a-z A-Z]{1,15}" title="Solamente letras hasta 15 caracteres." class="form-control input-md" required="">
 						
 					  </div>
 					</div>                                    
@@ -106,7 +106,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="apellidopaterno">Apellido Paterno</label>
 					  <div class="col-md-4">
-					  <input id="apellidopaterno" name="apellidopaterno" type="text" class="form-control input-md" required="">
+					  <input id="apellidopaterno" name="apellidopaterno" type="text" pattern="[a-z A-Z]{1,15}" title="Solamente letras hasta 15 caracteres." class="form-control input-md" required="">
 						
 					  </div>
 					</div> 
@@ -115,7 +115,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="apellidomaterno">Apellido Materno</label>  
 					  <div class="col-md-4">
-					  <input id="apellidomaterno" name="apellidomaterno" type="text" class="form-control input-md" required="">
+					  <input id="apellidomaterno" name="apellidomaterno" type="text" pattern="[a-z A-Z]{1,15}" title="Solamente letras hasta 15 caracteres." class="form-control input-md" required="">
 						
 					  </div>
 					</div>
