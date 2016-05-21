@@ -135,8 +135,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="fechanacimiento">Fecha Nacimiento</label>  
 					  <div class="col-md-4">
-					  <input id="fechanacimiento" name="fechanacimiento" type="text" class="form-control input-md" required="">
-						
+					  <input id="fechanacimiento" name="fechanacimiento" type="date" class="form-control input-md" required="">						
 					  </div>
 					</div>
 
@@ -145,9 +144,9 @@
 					  <label class="col-md-4 control-label" for="estatura">Estatura</label>  
 					  <div class="col-md-4">
 					  <span class="help-block">Pies:</span>
-					  <input id="pies" name="pies" type="text" class="form-control input-md" required="">
+					  <input id="pies" name="pies" type="number" min="3" max="7" value="5" class="form-control input-md" required="">
 					  <span class="help-block">Pulgadas:</span>
-					  <input id="pulgadas" name="pulgadas" type="text" class="form-control input-md" required="">					    
+					  <input id="pulgadas" name="pulgadas" type="number" min="0" max="11" value="5" class="form-control input-md" required="">					    
 					  </div>
 					</div>
 
@@ -156,7 +155,7 @@
 					  <label class="col-md-4 control-label" for="peso">Peso</label>  
 					  <div class="col-md-4">
 					  <span class="help-block">Libras:</span>
-					  <input id="peso" name="peso" type="text" class="form-control input-md" required="">
+					  <input id="peso" name="peso" type="number" min="20" max="500" value="160" class="form-control input-md" required="">
 					  </div>
 					</div>
 					
@@ -183,7 +182,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="telefono">Telefono</label>  
 					  <div class="col-md-4">
-					  <input id="telefono" name="telefono" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="555-555-5555" type="text" class="form-control input-md" required="">
+					  <input id="telefono" name="telefono" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="555-555-5555" title="Formato del telefono; 555-555-5555." type="text" class="form-control input-md" required="">
 					    
 					  </div>
 					</div>
@@ -297,7 +296,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="zipcode">Zip Code</label>  
 					  <div class="col-md-4">
-					  <input id="zipcode" name="zipcode" type="text" placeholder="" class="form-control input-md" required="">
+					  <input id="zipcode" name="zipcode" type="text" pattern="\d{5}" placeholder="00000" title="Formato del Zip Code; 00000." class="form-control input-md" required="">
 					    
 					  </div>
 					</div>

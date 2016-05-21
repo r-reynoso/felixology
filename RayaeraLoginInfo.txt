@@ -1,0 +1,16 @@
+-----------------------------------------------------------
+The following information is your web.com Information:
+Username: rayaera.net
+Password: maricela1765
+-----------------------------------------------------------
+The following information is your FTP Server Information:
+Host/Server Name: 000369z.wcomhost.com
+Username: ftp2261392
+Password: lypOvcg5
+Directory/Path:/htdocs
+E-mail password = Maricela@1765
+-----------------------------------------------------------
+The following information is your WordPress Information:
+Username: rreynoso
+Password: Maricela1765
+-----------------------------------------------------------
