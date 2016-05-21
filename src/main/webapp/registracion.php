@@ -183,7 +183,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="telefono">Telefono</label>  
 					  <div class="col-md-4">
-					  <input id="telefono" name="telefono" type="tel" placeholder="" class="form-control input-md" required="">
+					  <input id="telefono" name="telefono" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="555-555-5555" type="text" class="form-control input-md" required="">
 					    
 					  </div>
 					</div>
