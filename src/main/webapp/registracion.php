@@ -19,7 +19,7 @@
 
 	<!-- CSS
     ================================================== -->
-   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/default.css"> 
    <link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/animate.css">
@@ -144,9 +144,9 @@
 					  <label class="col-md-4 control-label" for="estatura">Estatura</label>  
 					  <div class="col-md-4">
 					  <span class="help-block">Pies:</span>
-					  <input id="pies" name="pies" type="number" min="3" max="7" value="5" class="form-control input-md" required="">
+					  <input id="pies" name="pies" type="number" min="3" max="7" class="form-control input-md" required="">
 					  <span class="help-block">Pulgadas:</span>
-					  <input id="pulgadas" name="pulgadas" type="number" min="0" max="11" value="5" class="form-control input-md" required="">					    
+					  <input id="pulgadas" name="pulgadas" type="number" min="0" max="11" class="form-control input-md" required="">					    
 					  </div>
 					</div>
 
@@ -155,7 +155,7 @@
 					  <label class="col-md-4 control-label" for="peso">Peso</label>  
 					  <div class="col-md-4">
 					  <span class="help-block">Libras:</span>
-					  <input id="peso" name="peso" type="number" min="20" max="500" value="160" class="form-control input-md" required="">
+					  <input id="peso" name="peso" type="number" min="20" max="500" class="form-control input-md" required="">
 					  </div>
 					</div>
 					
