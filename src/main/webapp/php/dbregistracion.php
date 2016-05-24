@@ -11,13 +11,9 @@
 			
 		if (!$conn)																
 		{
-			echo "Did Not Connect successfully";
-			die(" Connection failed: " . mysqli_connect_error());
-		}
-		else
-		{
-			echo "Did Connect successfully!!!";
-		}			
+				header('Location: /iniciarseccion.html');
+				exit;
+		}				
 		
 		//Incert data into database					
 		$value1 = $_POST['nombre'];
@@ -42,10 +38,17 @@
 		VALUES ('$value1', '$value2', '$value3', '$value4', '$value5', '$value6', '$value7', '$value8', '$value9', '$value10', '$value11',
 		'$value12', '$value13', '$value14', '$value15', '$value16', NOW() )";
 		
-		//Notification of record created successfully or not
-		if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
-		} else {
+		//Notification of record created successfully or not and if there is an existin record.
+		if ($conn->query($sql) === TRUE)
+		{
+			echo "Nuevo record creado.";
+		} 
+		elseif ($value9 === (select ) )
+		{
+			echo "E-mail ya se esta en record.";
+		}
+		else 
+		{
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 		
