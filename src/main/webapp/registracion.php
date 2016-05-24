@@ -171,13 +171,14 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="password">Password</label>
 					  <div class="col-md-4">
-					    <input id="password" name="password" type="password" class="form-control input-md" required="">
+					    <input id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos una letra mayúscula y minúscula, un número, un caracter especial y no menos de 8 caracteres." class="form-control input-md" required="">
+					    
 					  </div>
 					</div>
 						
 				</div>
 				
-    			<div class="six columns add-bottom">
+    					<div class="six columns add-bottom">
 					<!-- Text input-->
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="telefono">Telefono</label>  

@@ -29,7 +29,7 @@
 		$value7 = $_POST['pulgadas'];
 		$value8 = $_POST['peso'];
 		$value9 = $_POST['email'];
-		$value10 = $_POST['password'];
+		$value10 = md5($_POST['password']);
 		$value11 = $_POST['telefono'];
 		$value12 = $_POST['direccion'];
 		$value13 = $_POST['pueblo'];
