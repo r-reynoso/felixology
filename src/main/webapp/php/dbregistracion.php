@@ -43,9 +43,15 @@
 		{
 			echo "Nuevo record creado.";
 		} 
-		elseif ($value9 === (select ) )
+		elseif (!$prep->execute($value9))
 		{
-			echo "E-mail ya se esta en record.";
+			$err = $prep->errorInfo();
+			if (isset($err[1]))
+			{
+				// 1062 - Duplicate entry
+				if ($err[1] == 1062)
+					echo 'This email already exists.';
+			}
 		}
 		else 
 		{
