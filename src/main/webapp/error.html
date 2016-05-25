@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+   <title>Índice de Masa Corporal</title>
+   <meta name="description" content="">  
+   <meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/alertify.default.css">
+   <link rel="stylesheet" href="css/alertify.core.css">
+   <link rel="stylesheet" href="css/alertify.bootstrap.css">
+   
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/fcalc.js"></script>
+	<script src="js/alertify.js"></script>
+	<script src="js/alertify.min.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon1.png" ></link>
+	
+   <!-- Style
+   =================================================== 
+   <style>
+		table.ex1 {
+			border-collapse: separate;
+			border-spacing: 60px 10px;
+		}
+   </style> -->
+</head>
+
+<body>
+
+   <div id="preloader">      
+      <div id="status">
+         <img src="images/preloader.gif" height="64" width="64" alt="">
+      </div>
+   </div>
+
+   <!-- Header
+   ================================================== -->
+   <header>
+
+      <div class="logo">
+         <a class="smoothscroll" href="#hero"><img alt="" src="images/logo3.png"></a>
+      </div>
+
+      <nav id="nav-wrap">         
+         
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+	     <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>         
+
+         <ul id="nav" class="nav">
+            <li><a href="index.html">Página Principal</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <ul class="header-social">
+         <li><a href="https://www.facebook.com/pages/Rayaera-Personal-Training-Network/489611624406124?ref=br_tf"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="http://instagram.com/rayaerarunner/"><i class="fa fa-instagram"></i></a></li>
+         <li><a href="https://twitter.com/Rayaerapr"><i class="fa fa-twitter"></i></a></li>
+         <!-- <li><a href="#"><i class="fa fa-linkedin"></i></a></li> -->
+      </ul>
+
+   </header> <!-- Header End -->
+   
+      
+   <!-- Style Guide Section
+   ================================================== -->
+   <section id="styles" style="padding: 90px 0 72px; background: #fff;">
+
+      <div class="row section-head">
+
+         <h1>Índice de Masa Corporal</h1>
+
+         <p>El Índice de Masa Corporal (IMC) provee una medida corpulencia 
+         basada en la altura y el peso tanto para los hombres como para las mujeres. El IMC es la 
+         relación entre el peso y el cuadrado de la altura, y se calcula dividiendo el peso en libras 
+         por la altura en pulgadas al cuadrado (IMC = peso/altura2). </p>                 
+
+      </div> <!-- Row End-->
+
+      <div class="row add-bottom">
+
+      	<hr> 
+
+        <div class="six columns add-bottom"> 
+         
+         	<form>            
+				<h4>Altura</h4>
+ 					Pies:		<input type="text" id="pies">	
+ 					Pulgadas:	<input type="text" id="pulgadas">		
+ 			    <h4>Peso</h4>    
+			    	Libas:		<input type="text" id="libras">
+			    	
+ 			   	<div><input type="button" value="Calcular    IMC" onClick="imc()"></div> 			
+ 				<div><input type="reset" value="Borrar datos"></div> 	 			     			 				 		    
+            </form>  
+            
+                        
+                          	                   
+        </div>
+        
+        <div class="six columns right">
+        
+        	<h4>Tabla de resultados:</h4> 
+        	<br>        	      
+ 			<table class="spacing">
+  				<tr>
+  					<td><h6>IMC</h6></td>
+  					<td><h6>Estado del peso</h6></td>
+  				</tr>      			   			
+  				<tr>
+   					<td>Menor a 18.5</td>
+   					<td>Por debajo del peso</td>		
+    			</tr>
+    			<tr>
+   					<td>18.5 - 24.9</td>
+   					<td>Normal</td>		
+    			</tr>
+    			<tr>
+   					<td>25.0 - 29.9</td>
+   					<td>Por encima del peso</td>		
+    			</tr>
+    			<tr>
+   					<td>30.0 y superior</td>
+   					<td>Obesidad</td>		
+    			</tr>
+    			
+  			</table>
+  			<br>
+  			<br>
+  			<p>El índice de masa corporal no siempre es una forma precisa para decidir si
+        	 uno necesita o no bajar de peso. Si usted tiene más o menos músculo de lo normal,
+        	  su IMC puede no ser una medida perfecta de la cantidad de grasa corporal que tiene.
+        	</p>
+        </div> 
+               
+         	<hr>
+         
+     </div> <!-- Row End-->
+
+      
+   </section> <!-- Style Guide Section End-->
+   
+   <!-- Footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">         
+
+         <div class="six columns info">
+         
+			<img src="images/logo1.png"/>
+			<p class="copyright">&copy; Rayaera.net. Todos los derechos reservados 2015.
+			Diseño por <a title="Styleshout" href="http://www.styleshout.com/">Styleshout.</a>
+			Fundada en el año 2009 por Félix López Santiago.
+			</p>
+		 			 	              
+         </div>
+
+         <div class="six columns right-cols">
+
+            <div class="row">
+
+               <div class="columns">
+                  <h3 class="address">Visítanos</h3>
+                  <p>
+                  Ave Ramirez de<br> 
+                  Arellano Centro <br> 
+                  Deportivo Torrimar<br>
+                  Guaynabo Puerto Rico,<br>
+                  00966.
+                  </p>
+               </div>
+
+               <div class="columns">
+                  <h3 class="social">Socializar</h3>
+                  <ul>
+                     <li><a href="https://www.facebook.com/pages/Rayaera-Personal-Training-Network/489611624406124?ref=br_tf">Facebook</a></li>
+                     <li><a href="https://twitter.com/Rayaerapr">Twitter</a></li>
+                     <li><a href="http://instagram.com/rayaerarunner/">Instagram</a></li>
+                  </ul>
+               </div>
+
+               <div class="columns last">
+                  <h3 class="contact">Contáctenos</h3>
+                  <ul>
+                    <li><a href="tel:787-349-7945">787-349-7945</a></li>
+                    <li><a href="mailto:felixlopez@rayaera.net">felixlopez@rayaera.net</a></li>
+                  </ul>
+               </div>
+
+            </div> <!-- Nested Row End -->
+
+         </div>
+
+         
+		 	
+         <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#styles"><i class="icon-up-open"></i></a>
+         </div>
+
+      </div> <!-- Row End -->
+
+   </footer> <!-- Footer End-->
+   
+   
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/jquery.fitvids.js"></script>
+   <script src="js/imagelightbox.js"></script>
+   <script src="js/jquery.prettyPhoto.js"></script>   
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
