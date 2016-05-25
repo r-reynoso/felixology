@@ -11,7 +11,7 @@
 			
 		if (!$conn)																
 		{
-				header('Location: /iniciarseccion.html');
+				header('Location: /error.html');
 				exit;
 		}				
 		
