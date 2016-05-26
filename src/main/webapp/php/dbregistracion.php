@@ -1,6 +1,6 @@
 <!-- Database connection script -->>
 <?php
-		// Create connection
+		// Create connection variables
 		$servername = "10.30.84.161";
 		$username = "rayaera";
 		$password = "Maricela1765";		
@@ -39,25 +39,21 @@
 		'$value12', '$value13', '$value14', '$value15', '$value16', NOW() )";
 		
 		//Notification of record created successfully or not and if there is an existin record.
+				
 		if ($conn->query($sql) === TRUE)
 		{
 			echo "Nuevo record creado.";
 		} 
-		elseif (!$prep->execute($value9))
+		elseif(mysql_errno() == 1062)
 		{
-			$err = $prep->errorInfo();
-			if (isset($err[1]))
-			{
-				// 1062 - Duplicate entry
-				if ($err[1] == 1062)
-					echo 'This email already exists.';
-			}
+			echo "Email ya existe en la base de datos";
 		}
 		else 
 		{
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 		
+				
 		$conn->close();
 						
 ?>
