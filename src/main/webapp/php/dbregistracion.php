@@ -8,7 +8,6 @@
 		
 		// Check connection
 		$conn = mysqli_connect($servername, $username, $password, $database);   
-			
 		if (!$conn)																
 		{
 				header('Location: /error.html');
@@ -39,19 +38,16 @@
 		'$value12', '$value13', '$value14', '$value15', '$value16', NOW() )";
 		
 		//Notification of record created successfully or not and if there is an existin record.
-				
+		
 		if ($conn->query($sql) === TRUE)
-		{
-			echo "Nuevo record creado.";
-		} 
-		elseif(mysql_errno() == 1062)
-		{
-			echo "Email ya existe en la base de datos";
-		}
+			{
+				echo "Nuevo record creado.";
+			} 
+				
 		else 
-		{
-			echo "Error: " . $sql . "<br>" . $conn->error;
-		}
+			{
+				echo "Error: ". $conn->error;
+			}
 		
 				
 		$conn->close();
