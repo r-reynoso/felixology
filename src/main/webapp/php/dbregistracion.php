@@ -10,7 +10,7 @@
 		$conn = mysqli_connect($servername, $username, $password, $database);   
 		if (!$conn)																
 		{
-				header('Location: /error.html');
+				header('Location: /errorconn.html');
 				exit;
 		}				
 		
@@ -44,9 +44,15 @@
 				echo "Nuevo record creado.";
 			} 
 				
-		else 
+		elseif($conn->errno == 1062) 
 			{
-				echo "Error: ". $conn->error;
+				header('Location: /errordupli.html');
+				exit;
+			}
+		else	
+			{
+				header('Location: /errorconn.html');
+				exit;
 			}
 		
 				

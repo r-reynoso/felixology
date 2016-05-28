@@ -127,7 +127,7 @@
  				</div>
 				<hr>
 				
-				<h3>¿Se te olvido el password?<a href=""> Haga un click aquí.</a></h3>                    <!-- Prepara luego la forma para rescatar password -->
+				<h3>¿Se te olvido el password?<a href="recuperacionpw.php"> Haga un click aquí.</a></h3>                    
 				<h3>¿No eres un usuario?<a href="registracion.php"> Favor de registrarse aquí.</a></h3>
 				
 					
