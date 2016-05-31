@@ -19,7 +19,9 @@
 		$value2 = $_POST['zipcode'];
 		
 		//Get the data from the informacionpersonal database.								
-		$sql = "SELECT * FROM informacionpersonal WHERE email = '$value1' AND zipcode = '$value2' ";
+		$sql =  "SELECT * FROM informacionpersonal WHERE email = $value1 ";
+		
+		echo $sql;
 		
 		//Notification to see if the data input is valid, if so, generate automatic email.
 		if ($conn->query($sql) === TRUE)
@@ -30,6 +32,7 @@
 		elseif($conn->query($sql) === FALSE) 
 			{
 				echo "Prueba de verificacion existente de email NOOO paso!!!";
+				echo $sql; 
 			}
 					
 		$conn->close();
