@@ -78,7 +78,7 @@
       
          <div class="row add-bottom">
 		 
-			<form class="form-horizontal">
+			<form class="form-horizontal" action="php/dbrecuperacionpw.php" method="post">
 				
 				<!-- Form Name -->
 					<div class="row section-head">
@@ -115,7 +115,7 @@
 						<div class="form-group">
 						  <label class="col-md-4 control-label" for="iniciar"></label>
 						  <div class="col-md-4">
-						    <button id="enviarpw" name="enviarpw" class="btn btn-primary">Enviar contraseña.</button>
+						    <button id="enviarpw" name="enviarpw" type="submit" class="btn btn-primary">Enviar contraseña</button>
 						  </div>
 						</div>
 						<p>Al oprimir botón se te enviara tu contraseña a la dirección de correo electrónico puesto.</p>
