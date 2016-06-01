@@ -1,6 +1,7 @@
 <!-- Database connection script -->>
 <?php
-		// Create connection variables
+		
+		//Create connection variables
 		$servername = "10.30.84.161";
 		$username = "rayaera";
 		$password = "Maricela1765";		
@@ -12,7 +13,7 @@
 		{
 				header('Location: /errorconn.html');
 				exit;
-		}				
+		}			
 		
 		//Incert data into database					
 		$value1 = $_POST['nombre'];
@@ -41,7 +42,7 @@
 		
 		if ($conn->query($sql) === TRUE)
 			{
-				echo "Nuevo record creado.";
+				header('Location: /perfil.php');
 			} 
 				
 		elseif($conn->errno == 1062) 
