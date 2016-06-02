@@ -1,18 +1,3 @@
-<?php
-// Create connection variables
-$servername = "10.30.84.161";
-$username = "rayaera";
-$password = "Maricela1765";
-$database = "registracion";
-
-// Check connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-if (!$conn)
-{
-	header('Location: /errorconn.html');
-	exit;
-}
-?>
 
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
@@ -114,35 +99,41 @@ if (!$conn)
       <div class="row add-bottom">
 
       	<hr> 
-
+ 
         <div class="six columns add-bottom">            <!--lado izquerdo de la pantalla PHP Lesson 36 - Displaying MySQL Records in a HTML Table -->
-         
-         	<?php 
-	         	mysql_select_db("registracion",$conn);
-	         	$sql = "SELECT nombre FROM informacionpersonal";
-	         	$myData = mysql_query($sql, $conn); 
-	         	while($record = mysql_fetch_array($myData)){
-	         		echo $record['nombre'];
-	         		echo "<br />";
-	         	}
-	         	
-	         	mysql_close($conn);
-         	?>
+         	<?php
+					// Create connection variables
+					try
+					{				
+						$conn = new PDO('mysql:host=10.30.84.161;dbname=registracion','rayaera','Maricela1765');
+					}
+					catch (PDOException $e)
+					{
+						echo $e->getMessage(). "<br>";
+					}
+					
+						$sql = 'SELECT nombre, apellidopaterno, imagen FROM informacionpersonal';
+						
+						foreach ($conn->query($sql) as $row)
+						{
+							echo $row['nombre']      ." - ".     $row['apellidopaterno']     ." - ".  $row["imagen"]  .  "<br>";
+						}
+					
+					$conn = null;
+										
+			?>
+         	       
                                                    
         </div>
         
         <div class="six columns right">                  <!-- Lado dereco de la pantalla -->
         
-        	<?php 
+        	       	
         	
-        	
-        	
-        	
-        	?>
         	  	
         </div> 
-               
-         	<hr>
+ 
+        <hr>
          
      </div> <!-- Row End-->
 
