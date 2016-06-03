@@ -11,7 +11,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-   <title>Perfil</title>
+   <title>Tu perfil</title>
    <meta name="description" content="">  
    <meta name="author" content="">
 
@@ -116,7 +116,7 @@
 						
 						foreach ($conn->query($sql) as $row)
 						{
-							echo $row['nombre']      ." - ".     $row['apellidopaterno']     ." - ".  $row["imagen"]  .  "<br>";
+							echo $row['nombre']   ." - ".   $row['apellidopaterno']   ." - ".  '<img src="data:image/jpeg;charset=utf-8;base64,' . base64_encode($row['imagen']) . '" />'  .  "<br>";
 						}
 					
 					$conn = null;
