@@ -101,27 +101,35 @@
       	<hr> 
  
         <div class="six columns add-bottom">            <!--lado izquerdo de la pantalla PHP Lesson 36 - Displaying MySQL Records in a HTML Table -->
-         	<?php
-					// Create connection variables
-					try
-					{				
-						$conn = new PDO('mysql:host=10.30.84.161;dbname=registracion','rayaera','Maricela1765');
-					}
-					catch (PDOException $e)
-					{
-						echo $e->getMessage(). "<br>";
-					}
+        <?php
+
+			// configuration
+			
+				$dbhost        = "10.30.84.161";			
+				$dbname        = "registracion";			
+				$dbuser        = "rayaera";			
+				$dbpass        = "Maricela1765";
+			
+			// database connection
+			
+				$conn = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
+			
+			// query
+			
+				$sql = "SELECT nombre, apellidopaterno, imagen FROM informacionpersonal";			
+				$q = $conn->prepare($sql);			
+				$q->execute();			
+				$q->bindColumn(1, $nombre);			
+				$q->bindColumn(2, $apellidopaterno);			
+				$q->bindColumn(3, $imagen, PDO::PARAM_LOB);				
+				$q->fetch(PDO::FETCH_BOUND);
+				
+				header('Content-type: image/jpeg' .$imagen);
+				echo $nombre, $apellidopaterno, $imagen;
 					
-						$sql = 'SELECT nombre, apellidopaterno, imagen FROM informacionpersonal';
-						
-						foreach ($conn->query($sql) as $row)
-						{
-							echo $row['nombre']   ." - ".   $row['apellidopaterno']   ." - ".  '<img src="data:image/jpeg;charset=utf-8;base64,' . base64_encode($row['imagen']) . '" />'  .  "<br>";
-						}
-					
-					$conn = null;
-										
-			?>
+
+		?>
+        	
          	       
                                                    
         </div>
