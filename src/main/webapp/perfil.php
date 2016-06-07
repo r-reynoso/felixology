@@ -40,12 +40,12 @@
 	<link rel="shortcut icon" href="favicon1.png" ></link>
 	
    <!-- Style
-   =================================================== 
+   =================================================== -->
    
 </head>
 
 <body>
-
+ 
    <div id="preloader">      
       <div id="status">
          <img src="images/preloader.gif" height="64" width="64" alt="">
@@ -92,7 +92,9 @@
          <p>El Índice de Masa Corporal (IMC) provee una medida corpulencia 
          basada en la altura y el peso tanto para los hombres como para las mujeres. El IMC es la 
          relación entre el peso y el cuadrado de la altura, y se calcula dividiendo el peso en libras 
-         por la altura en pulgadas al cuadrado (IMC = peso/altura2). </p>                 
+         por la altura en pulgadas al cuadrado (IMC = peso/altura2). </p>   
+         
+                      
 
       </div> <!-- Row End-->
 
@@ -101,7 +103,8 @@
       	<hr> 
  
         <div class="six columns add-bottom">            <!--lado izquerdo de la pantalla PHP Lesson 36 - Displaying MySQL Records in a HTML Table -->
-        <?php
+       
+        	<?php
 
 			// configuration
 			
@@ -124,13 +127,13 @@
 				$q->bindColumn(3, $imagen, PDO::PARAM_LOB);				
 				$q->fetch(PDO::FETCH_BOUND);
 				
-				header('Content-type: image/jpeg' .$imagen);
-				echo $nombre, $apellidopaterno, $imagen;
-					
-
-		?>
-        	
-         	       
+				echo $nombre . " - " . $apellidopaterno . "<br>";
+				
+				header("Content-Type: image/jpeg");
+				echo $imagen;
+								
+			?> 
+         	      
                                                    
         </div>
         
