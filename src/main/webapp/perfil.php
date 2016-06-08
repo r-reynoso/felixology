@@ -84,17 +84,48 @@
    <!-- Style Guide Section
    ================================================== -->
    <section id="styles" style="padding: 90px 0 72px; background: #fff;">
+   	  <?php
+
+			// configuration
+			
+	        	$servername = "10.30.84.161";
+	        	$username = "rayaera";
+	        	$password = "Maricela1765";
+	        	$database = "registracion";
+			
+			// database connection
+			
+	        	$conn = mysqli_connect($servername, $username, $password, $database);
+	        	if (!$conn)
+	        	{
+	        		header('Location: /errorconn.html');
+	        		exit;
+	        	}
+	        	
+	        	//Getting email value from dbregistracion.php for the query data selection.
+	        	session_start();
+	        	$email = $_SESSION['value9'];
+	  ?>  
 
       <div class="row section-head">
 
-         <h1>Índice de Masa Corporal</h1>
-
-         <p>El Índice de Masa Corporal (IMC) provee una medida corpulencia 
-         basada en la altura y el peso tanto para los hombres como para las mujeres. El IMC es la 
-         relación entre el peso y el cuadrado de la altura, y se calcula dividiendo el peso en libras 
-         por la altura en pulgadas al cuadrado (IMC = peso/altura2). </p>   
-         
-                      
+         <h1>
+         	<?php
+         	     // query
+         		
+	         	 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$email' ";
+	         	 $result = $conn->query($sql);
+         		 	
+		         if ($result->num_rows > 0) {
+		         	// output data of each row
+		         	while($row = $result->fetch_assoc()) {
+		         		echo $row["nombre"]. "  " . $row["apellidopaterno"]. "  " . $row["apellidomaterno"] ;
+		         	}
+		         } else {
+		         	echo "No hay datos";
+		         }
+         	?>
+         </h1>
 
       </div> <!-- Row End-->
 
@@ -103,45 +134,44 @@
       	<hr> 
  
         <div class="six columns add-bottom">            <!--lado izquerdo de la pantalla PHP Lesson 36 - Displaying MySQL Records in a HTML Table -->
-       
-        	<?php
-
-			// configuration
-			
-				$dbhost        = "10.30.84.161";			
-				$dbname        = "registracion";			
-				$dbuser        = "rayaera";			
-				$dbpass        = "Maricela1765";
-			
-			// database connection
-			
-				$conn = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
-			
-			// query
-			
-				$sql = "SELECT nombre, apellidopaterno, imagen FROM informacionpersonal";			
-				$q = $conn->prepare($sql);			
-				$q->execute();			
-				$q->bindColumn(1, $nombre);			
-				$q->bindColumn(2, $apellidopaterno);			
-				$q->bindColumn(3, $imagen, PDO::PARAM_LOB);				
-				$q->fetch(PDO::FETCH_BOUND);
-				
-				echo $nombre . " - " . $apellidopaterno . "<br>";
-				
-				header("Content-Type: image/jpeg");
-				echo $imagen;
-								
+       		<?php 
+	       		// query
+	       		      
+	       		$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$email'";
+	       		$result = $conn->query($sql);
+       		
+	       		if ($result->num_rows > 0) {
+	       			// output data of each row
+	       			while($row = $result->fetch_assoc()) {
+	       				echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" ;
+	       			}
+	       		} else {
+	       			echo "No hay datos";
+	       		}											
 			?> 
-         	      
-                                                   
         </div>
         
         <div class="six columns right">                  <!-- Lado dereco de la pantalla -->
-        
-        	       	
-        	
-        	  	
+	        <?php
+		        // query
+		        
+		        $sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$email'";
+		        $result = $conn->query($sql);
+	        
+		        if ($result->num_rows > 0) {
+		        	// output data of each row
+		        	while($row = $result->fetch_assoc()) {
+		        		
+		        		$imagen = $row['imagen'];
+		        		header("Content-Type: image/jpeg");
+		        		echo $imagen;
+		        	}
+		        } else {
+		        	echo "No hay datos";
+		        }
+	             
+		        $conn->close();
+	        ?>   	  	
         </div> 
  
         <hr>
