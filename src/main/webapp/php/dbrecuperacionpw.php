@@ -1,40 +1,33 @@
 <!-- Database connection script -->>
 <?php
-		// Create connection variables
-		$servername = "10.30.84.161";
-		$username = "rayaera";
-		$password = "Maricela1765";		
-		$database = "registracion";
+		//Include connection.php file.
+		include 'connection.php';
 		
-		// Check connection
-		$conn = mysqli_connect($servername, $username, $password, $database);   
-		if (!$conn)																
-		{
-				header('Location: /errorconn.html');
-				exit;
-		}				
+		//Starting all of the variables connections in and out of this php page.
+		session_start();
+		
+		//Getting connection value from connection.php.
+		$conn= $_SESSION['connection'];
 		
 		//Get data from user					
 		$value1 = $_POST['email'];
 		$value2 = $_POST['zipcode'];
 		
 		//Get the data from the informacionpersonal database.								
-		$sql =  "SELECT * FROM informacionpersonal WHERE email = $value1 ";
-		
-		echo $sql;
-		
+		$sql = "SELECT email, zipcode FROM informacionpersonal WHERE email = '$value1' ";
+			
 		//Notification to see if the data input is valid, if so, generate automatic email.
 		if ($conn->query($sql) === TRUE)
-			{
-				echo "Prueba de verificacion existente de email paso!!!";
-			} 
-				
-		elseif($conn->query($sql) === FALSE) 
-			{
-				echo "Prueba de verificacion existente de email NOOO paso!!!";
-				echo $sql; 
-			}
-					
+		{
+			echo "Paso la prueba";
+		}
+		
+		else
+		{
+			echo "No paso la prueba";
+		}
+		
+						
 		$conn->close();
 						
 ?>
