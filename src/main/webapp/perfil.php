@@ -123,7 +123,7 @@
 
       	<hr> 
  
-        <div class="six columns add-bottom">            <!--lado izquerdo de la pantalla PHP Lesson 36 - Displaying MySQL Records in a HTML Table -->
+        <div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
        		<?php 
 	       		// query
 	       		      
@@ -141,7 +141,7 @@
 			?> 
         </div>
         
-        <div class="six columns right">                  <!-- Lado dereco de la pantalla -->
+        <div class="six columns right"> <!-- Lado dereco de la pantalla -->
 	        <?php
 		        // query
 		        
@@ -151,10 +151,8 @@
 		        if ($result->num_rows > 0) {
 		        	// output data of each row
 		        	while($row = $result->fetch_assoc()) {
-		        		
-		        		$imagen = $row['imagen'];
-		        		header("Content-Type: image/jpeg");
-		        		echo $imagen;
+		        		header('Content-Type: image/jpeg');
+		        		echo $row['imagen'];		        		
 		        	}
 		        } else {
 		        	echo "No hay datos";
