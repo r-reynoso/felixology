@@ -83,6 +83,7 @@
       
    <!-- Style Guide Section
    ================================================== -->
+  
    <section id="styles" style="padding: 90px 0 72px; background: #fff;">
    	  <?php
 		
