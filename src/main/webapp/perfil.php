@@ -98,7 +98,7 @@
 	          $conn= $_SESSION['connection'];
 	  ?>  
 
-      <div class="row section-head">
+      <div class="row section-head"> <!---->
 
          <h1>
          	<?php
@@ -126,41 +126,48 @@
  
         <div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
        		<?php 
-	       		// query
-	       		      
-	       		$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$email'";
-	       		$result = $conn->query($sql);
+       		// query
        		
-	       		if ($result->num_rows > 0) {
-	       			// output data of each row
-	       			while($row = $result->fetch_assoc()) {
-	       				echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" ;
-	       			}
-	       		} else {
-	       			echo "No hay datos";
-	       		}											
-			?> 
+       		$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$email'";
+       		$result = $conn->query($sql);
+       		 
+       		if ($result->num_rows > 0) {
+       			// output data of each row
+       			while($row = $result->fetch_assoc()) {       				
+       				header('Content-type: image/jpeg');
+       				$imagedat = $row['imagen'];
+       				echo '<img src="data:image/jpeg;base64,' . $imagedat . '" width="290" height="290">';      				
+       			}
+       			 
+       			 
+       		} else {
+       			echo "No hay datos";
+       		}
+       		
+			?> Maricel
+			
         </div>
         
         <div class="six columns right"> <!-- Lado dereco de la pantalla -->
 	        <?php
-		        // query
 		        
-		        $sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$email'";
-		        $result = $conn->query($sql);
+	        // query
 	        
-		        if ($result->num_rows > 0) {
-		        	// output data of each row
-		        	while($row = $result->fetch_assoc()) {
-		        		header('Content-Type: image/jpeg');
-		        		echo $row['imagen'];		        		
-		        	}
-		        } else {
-		        	echo "No hay datos";
-		        }
+	        $sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$email'";
+	        $result = $conn->query($sql);
+	         
+	        if ($result->num_rows > 0) {
+	        	// output data of each row
+	        	while($row = $result->fetch_assoc()) {
+	        		echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" ;
+	        	}
+	        } else {
+	        	echo "No hay datos";
+	        }	        
 	             
 		        $conn->close();
-	        ?>   	  	
+	        ?>	        
+	          	
         </div> 
  
         <hr>
