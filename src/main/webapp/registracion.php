@@ -309,11 +309,22 @@
 					    <input type="file" name="imagen" onchange="loadFile(event)" accept="image/*" required="">
 					    <img id="imagen"/>
 						    <script>
-								var loadFile = function(event)
+								/*var loadFile = function(event)
 								  {
 								    var output = document.getElementById('imagen');
 								    output.src = URL.createObjectURL(event.target.files[0]);
-								  };
+								  };*/
+								  var loadFile = function(event)
+								  {
+									var reader = new FileReader();
+									
+									reader.onload = function()
+										{
+									      var output = document.getElementById('imagen');
+									      output.src = reader.result;
+									    };
+									reader.readAsDataURL(event.target.files[0]);
+								  };								  
 							</script>
 					  </div>
 					</div>
