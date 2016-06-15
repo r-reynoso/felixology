@@ -158,6 +158,14 @@
 		        	// output data of each row
 		        	while($row = $result->fetch_assoc()) {
 		        		echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br> <br>" ;
+		        		
+		        		$pies = $row["pies"];                    //Cojer data de la base de datos y enviarlo a una variable
+		        		$pulgadas = $row["pulgadas"];
+		        		$peso = $row["peso"];
+		        		
+		        		$altura = $pies * 12 + $pulgadas;
+		        		$imc = ($peso / $altura)
+		        		
 		        	}
 		        } else {
 		        	echo "No hay datos";
