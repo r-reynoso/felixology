@@ -28,6 +28,7 @@
    <!-- Script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
+
 	
    <!-- Favicons
 	================================================== -->
@@ -79,7 +80,7 @@
       
          <div class="row add-bottom">
 		
-			<form class="form-horizontal" action="php/dbregistracion.php" method="post">
+			<form class="form-horizontal" action="php/dbregistracion.php" method="post" enctype="multipart/form-data">
 			
 							 						
 				<fieldset>
@@ -309,22 +310,11 @@
 					    <input type="file" name="imagen" onchange="loadFile(event)" accept="image/*" required="">
 					    <img id="imagen"/>
 						    <script>
-								/*var loadFile = function(event)
+								var loadFile = function(event) //Preview the image before sudmit
 								  {
 								    var output = document.getElementById('imagen');
 								    output.src = URL.createObjectURL(event.target.files[0]);
-								  };*/
-								  var loadFile = function(event)
-								  {
-									var reader = new FileReader();
-									
-									reader.onload = function()
-										{
-									      var output = document.getElementById('imagen');
-									      output.src = reader.result;
-									    };
-									reader.readAsDataURL(event.target.files[0]);
-								  };								  
+								  };
 							</script>
 					  </div>
 					</div>

@@ -26,7 +26,7 @@ function imc()
 			 			
 	 				}
  				
- 		}
+ 		}		
 
 function alert1()
 		{
@@ -62,5 +62,5 @@ function alert2()
 						
 		} */
 
-/
+
 

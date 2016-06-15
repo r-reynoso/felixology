@@ -25,7 +25,7 @@
 		$value13 = $_POST['pueblo'];
 		$value14 = $_POST['estado'];
 		$value15 = $_POST['zipcode'];
-		$value16 = $_POST['imagen'];
+		$value16 = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 		
 		//Passing email value onto perfil.php for the query data selection.		
 		$_SESSION['value9'] = $value9;		

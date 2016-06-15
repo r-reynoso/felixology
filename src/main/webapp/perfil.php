@@ -135,9 +135,7 @@
 	       		if ($result->num_rows > 0) {
 	       			// output data of each row
 	       			while($row = $result->fetch_assoc()) {
-	       				$imagendata = $row["imagen"]; 
-	       				header("Content-Type: image/jpeg");
-	       				echo $imagendata;
+	       				echo '<img src="data:image/jpeg;base64,'.base64_encode($row['imagen'] ).'" width="290" height="290"/>';
 	       			}
 	       			 
 	       			 
