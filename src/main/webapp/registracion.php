@@ -313,17 +313,15 @@
 								var loadFile = function(event) //Preview the image before sudmit
 								  {
 								    var output = document.getElementById('imagen');
+								    imagen.style.height = '400px';
+								    imagen.style.width = '300px';
 								    output.src = URL.createObjectURL(event.target.files[0]);
 								  };
 							</script>
 					  </div>
 					</div>
 					
-					<br>
-					<br>
-					<br>
-					<br>
-													
+																							
 					<!-- Button -->
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="singlebutton"></label>

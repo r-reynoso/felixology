@@ -135,7 +135,7 @@
 	       		if ($result->num_rows > 0) {
 	       			// output data of each row
 	       			while($row = $result->fetch_assoc()) {
-	       				echo '<img src="data:image/jpeg;base64,'.base64_encode($row['imagen'] ).'" width="290" height="290"/>';
+	       				echo '<img src="data:image/jpeg;base64,'.base64_encode($row['imagen'] ).'" width="200" height="200"/>';
 	       			}
 	       			 
 	       			 
@@ -157,14 +157,16 @@
 		        if ($result->num_rows > 0) {
 		        	// output data of each row
 		        	while($row = $result->fetch_assoc()) {
-		        		echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br> <br>" ;
-		        		
+		        				        		
 		        		$pies = $row["pies"];                    //Cojer data de la base de datos y enviarlo a una variable
 		        		$pulgadas = $row["pulgadas"];
 		        		$peso = $row["peso"];
 		        		
-		        		$altura = $pies * 12 + $pulgadas;
-		        		$imc = ($peso / $altura)
+		        		$altura = $pies * 12 + $pulgadas;		 //Calcular indice de masa corporal.
+		        		$imc = ($peso / pow($altura,2)) * 703;
+		        		$imcf = number_format((float)$imc,1);
+		        		
+		        		echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;
 		        		
 		        	}
 		        } else {
