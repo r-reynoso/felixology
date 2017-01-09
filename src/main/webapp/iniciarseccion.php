@@ -105,7 +105,7 @@
 						
 						<!-- Password input-->
 						<div class="form-group">
-						  <label class="col-md-4 control-label" for="password">Password</label>
+						  <label class="col-md-4 control-label" for="password">Contraseña</label>
 						  <div class="col-md-4">
 						    <input id="password" name="password" type="password" class="form-control input-md">
 						    
@@ -127,7 +127,7 @@
  				</div>
 				<hr>
 				
-				<h3>¿Se te olvido el password?<a href="recuperacionpw.php"> Haga un click aquí.</a></h3>                    
+				<h3>¿Se te olvido la contraseña?<a href="recuperacionpw.php"> Haga un click aquí.</a></h3>                    
 				<h3>¿No eres un usuario?<a href="registracion.php"> Favor de registrarse aquí.</a></h3>
 				
 					
