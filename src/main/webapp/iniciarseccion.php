@@ -96,27 +96,26 @@
 						
 						<!-- Text input-->
 						<div class="form-group">
-						  <label class="col-md-4 control-label" for="e-mail">E-mail</label>  
-						  <div class="col-md-4">
-						  <input id="e-mail" name="e-mail" type="text" class="form-control input-md">
-						    
-						  </div>
-						</div>
+					  	  <label class="col-md-4 control-label" for="email">E-mail</label>  
+					  	  <div class="col-md-4">
+					      <input id="email" name="email" type="email" class="form-control input-md" required="">
+					      </div>
+					    </div>
 						
 						<!-- Password input-->
 						<div class="form-group">
-						  <label class="col-md-4 control-label" for="password">Contraseña</label>
-						  <div class="col-md-4">
-						    <input id="password" name="password" type="password" class="form-control input-md">
-						    
-						  </div>
-						</div>
+					      <label class="col-md-4 control-label" for="password">Password</label>
+					      <div class="col-md-4">
+					      <input id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos una letra mayúscula y minúscula, un número, un caracter especial y no menos de 8 caracteres." class="form-control input-md" required="">					    
+					      </div>
+					    </div>
 						
 						<!-- Button -->
 						<div class="form-group">
 						  <label class="col-md-4 control-label" for="iniciar"></label>
 						  <div class="col-md-4">
 						    <button id="iniciar" name="iniciar" class="btn btn-primary">Iniciar</button>
+						    <input type="reset" value="Borrar datos">
 						  </div>
 						</div>
 						

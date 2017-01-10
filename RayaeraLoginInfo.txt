@@ -1,16 +1,19 @@
 -----------------------------------------------------------
-The following information is your web.com Information:
+The following information is your web.com credentials:
 Username: rayaera.net
 Password: maricela1765
 -----------------------------------------------------------
-The following information is your FTP Server Information:
+The following information is your FTP Server credentials:
 Host/Server Name: 000369z.wcomhost.com
 Username: ftp2261392
 Password: lypOvcg5
 Directory/Path:/htdocs
 E-mail password = Maricela@1765
 -----------------------------------------------------------
-The following information is your WordPress Information:
+The following information is your WordPress credentials:
 Username: rreynoso
 Password: Maricela1765
 -----------------------------------------------------------
+The following intormation is for your github.com credentials:
+Username: r-reynoso@live.com
+Password: maricela1765
