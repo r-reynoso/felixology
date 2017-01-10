@@ -78,7 +78,7 @@
       
          <div class="row add-bottom">
 		 
-			<form class="form-horizontal">
+			<form class="form-horizontal" action="php/dbiniciarseccion.php" method="post" enctype="multipart/form-data">
 				
 				<!-- Form Name -->
 					<div class="row section-head">
