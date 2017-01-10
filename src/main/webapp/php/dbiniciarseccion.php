@@ -26,10 +26,13 @@
 				{
 				$email = $row["email"];
 				$password = $row["pasword"];
+					echo $email - $password;
+					/*
 					if()
 					{
 						                              //Aqui falta mas codigo!!!!!!!!!!!!!!1	
 					}
+					*/
 				
 				}
 		
