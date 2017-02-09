@@ -15,10 +15,7 @@
 
 		//Starting all of the variables connections in and out of this php page.		
 		session_start();
-				
-		//Getting connection value from connection.php.		
-		$conn= $_SESSION['connection'];
-				
+						
 		//Incert data into database					
 		$value1 = $_POST['nombre'];
 		$value2 = $_POST['apellidopaterno'];

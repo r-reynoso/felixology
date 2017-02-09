@@ -16,10 +16,7 @@
 		
 		//Starting all of the variables connections in and out of this php page.
 		session_start();
-		
-		//Getting connection value from connection.php.
-		$conn= $_SESSION['connection'];
-		
+				
 		//Get data from user					
 		$value1 = $_POST['email'];
 		$value2 = $_POST['zipcode'];
