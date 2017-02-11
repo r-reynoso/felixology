@@ -86,16 +86,27 @@
   
    <section id="styles" style="padding: 90px 0 72px; background: #fff;">
    	  <?php
-		
-		   	  //Include connection.php file.
-		   	  include 'php/connection.php';
+   	  		// Database conection configuration
+			   	  $servername = "10.30.84.161";
+			   	  $username = "rayaera";
+			   	  $password = "Maricela1765";
+			   	  $database = "registracion";
+			   	  
+   	  		// database connection error handeler
+			   	  $conn = mysqli_connect($servername, $username, $password, $database);
+			   	  if (!$conn)
+			   	  {
+			   	  	header('Location: /errorconn.html');
+			   	  	exit;
+			   	  }	
+		   	 
 	        	
-	          //Starting all of the variables connections in and out of this php page.
-	          session_start();
+	        //Starting all of the variables connections in and out of this php page.
+	        session_start();
 	          
-	          //Getting other value from other php file.
-	          $email = $_SESSION['value9'];
-	          $conn= $_SESSION['connection'];
+	        //Getting other value from other php file.
+	        $email = $_SESSION['value9'];
+	        
 	  ?>  
 
       <div class="row section-head"> <!---->
