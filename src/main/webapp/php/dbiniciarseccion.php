@@ -21,53 +21,22 @@
 		//Getting data from iniciacion.php
 		$value1 = $_POST['email'];
 		$value2 = md5($_POST['password']);
-				
+		
+		//Passing email value onto perfil.php for the query data selection.
+		$_SESSION['value1'] = $value1;
 			
 		//Querry email, and password validation else error connection.
-		$sql = "SELECT email, password From informacionpersonal WHERE email = '$value1' ";		
+		$sql = "SELECT * From informacionpersonal WHERE email = '$value1' AND password = '$value2' ";		
 		$result = $conn->query($sql);
 		
-		if ($result->num_rows > 0)
+		if ($result->num_rows > 0)		
 		{
-			// output data of each row
-			while($row = $result->fetch_assoc())
-				{
-				$email = $row["email"];
-				$password = $row["pasword"];
-					echo $email - $password;
-					/*
-					if()
-					{
-						                              //Aqui falta mas codigo!!!!!!!!!!!!!!1	
-					}
-					*/
-				
-				}
-		
+			header('Location: /perfil.php');
 		} 
 		else 
 		{
-			header('Location: /errorconn.html');
+			header('Location: /iniciarseccionerror.php');
 		}
 	
-		
-		
-		//Notification of record created successfully or not and if there is an existin record.
-		
-		if ($conn->query($sql) === TRUE)
-		{
-			header('Location: /perfil.php');
-		}
-		
-		elseif($conn->errno == 1062)
-		{
-			header('Location: /errordupli.html');
-		}
-		else
-		{
-			header('Location: /errorconn.html');
-		}
-		
-		
 		$conn->close();
 ?>

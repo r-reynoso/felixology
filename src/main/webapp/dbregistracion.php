@@ -37,7 +37,7 @@
 		//Passing email value onto perfil.php for the query data selection.		
 		$_SESSION['value9'] = $value9;		
 		
-		//Querry incert data into database								
+		//Querry								
 		$sql = "INSERT INTO informacionpersonal (nombre, apellidopaterno, apellidomaterno, genero, fechanacimiento, pies, pulgadas, peso,
 		email, password, telefono, direccion, pueblo, estado, zipcode, imagen, fechacomienzo)
 		VALUES ('$value1', '$value2', '$value3', '$value4', '$value5', '$value6', '$value7', '$value8', '$value9', '$value10', '$value11',

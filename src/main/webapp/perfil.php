@@ -105,7 +105,8 @@
 	        session_start();
 	          
 	        //Getting other value from other php file.
-	        $email = $_SESSION['value9'];
+	        $value9 = $_SESSION['value9'];
+	        $value1 = $_SESSION['value1']
 	        
 	  ?>  
 
@@ -115,7 +116,7 @@
          	<?php
          	     // query
          		
-	         	 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$email' ";
+	         	 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$value9' OR '$value1' ";
 	         	 $result = $conn->query($sql);
          		 	
 		         if ($result->num_rows > 0) {
@@ -140,7 +141,7 @@
        		<?php 
 	       		// query
 	       		
-	       		$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$email'";
+	       		$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$value9' OR '$value1' ";
 	       		$result = $conn->query($sql);
 	       		 
 	       		if ($result->num_rows > 0) {
@@ -162,7 +163,7 @@
 	        <?php		        
 		        // query
 		        
-		        $sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$email'";
+		        $sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value9' OR '$value1' ";
 		        $result = $conn->query($sql);
 		         
 		        if ($result->num_rows > 0) {
