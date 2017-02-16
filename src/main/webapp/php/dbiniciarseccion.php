@@ -29,7 +29,7 @@
 		$sql = "SELECT * From informacionpersonal WHERE email = '$value1' AND password = '$value2' ";		
 		$result = $conn->query($sql);
 		
-		if ($result->num_rows > 0)		
+		if ($result -> num_rows > 0)		
 		{
 			header('Location: /perfil.php');
 		} 

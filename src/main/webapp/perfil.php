@@ -105,8 +105,8 @@
 	        session_start();
 	          
 	        //Getting other value from other php file.
-	        $value9 = $_SESSION['value9'];
-	        $value1 = $_SESSION['value1']
+	        $value9 = $_SESSION['value9']; //value coming from dbregistracion.php
+	        $value1 = $_SESSION['value1']; //value coming from dbiniciarseccion.php
 	        
 	  ?>  
 
@@ -115,7 +115,8 @@
          <h1>
          	<?php
          	     // query
-         		
+         		 echo $value9;
+         		 echo $value1;
 	         	 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$value9' OR '$value1' ";
 	         	 $result = $conn->query($sql);
          		 	
