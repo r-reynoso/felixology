@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
@@ -105,8 +104,9 @@
 	        session_start();
 	          
 	        //Getting other value from other php file.
-	        $value9 = $_SESSION['value9']; //value coming from dbregistracion.php
 	        $value1 = $_SESSION['value1']; //value coming from dbiniciarseccion.php
+	        $value9 = $_SESSION['value9']; //value coming from dbregistracion.php
+	        
 	        
 	  ?>  
 
@@ -114,10 +114,8 @@
 
          <h1>
          	<?php
-         	     // query
-         		 echo $value9;
-         		 echo $value1;
-	         	 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$value9' OR '$value1' ";
+         	     // query         		
+	         	 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
 	         	 $result = $conn->query($sql);
          		 	
 		         if ($result->num_rows > 0) {
@@ -142,7 +140,7 @@
        		<?php 
 	       		// query
 	       		
-	       		$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$value9' OR '$value1' ";
+	       		$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
 	       		$result = $conn->query($sql);
 	       		 
 	       		if ($result->num_rows > 0) {
@@ -164,7 +162,7 @@
 	        <?php		        
 		        // query
 		        
-		        $sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value9' OR '$value1' ";
+		        $sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
 		        $result = $conn->query($sql);
 		         
 		        if ($result->num_rows > 0) {
@@ -185,7 +183,7 @@
 		        } else {
 		        	echo "No hay datos";
 		        }	        
-		             
+		        session_destroy();
 			    $conn->close();
 			    
 	        ?>	        
