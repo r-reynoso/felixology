@@ -8,7 +8,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-   <title>Iniciar sección</title>
+   <title>Recuperación de contraseña</title>
    <meta name="description" content="">  
    <meta name="author" content="">
 
@@ -78,11 +78,11 @@
       
          <div class="row add-bottom">
 		 
-			<form class="form-horizontal" action="php/dbiniciarseccion.php" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="php/dbrecuperacionpw.php" method="post">
 				
 				<!-- Form Name -->
 					<div class="row section-head">
-						<h2>Iníciate a Rayaera</h2>
+						<h2>Información invalida, intente nuevamente.</h2>
 					</div>
 					
 					<hr>
@@ -96,38 +96,38 @@
 						
 						<!-- Text input-->
 						<div class="form-group">
-					  	  <label class="col-md-4 control-label" for="email">E-mail</label>  
-					  	  <div class="col-md-4">
-					      <input id="email" name="email" type="email" class="form-control input-md" required="">
-					      </div>
-					    </div>
+						  <label class="col-md-4 control-label" for="email">E-mail</label>  
+						  <div class="col-md-4">
+						  <input id="email" name="email" type="email" class="form-control input-md" required="">
+						  </div>
+						</div>
 						
-						<!-- Password input-->
+						<!-- Text input-->
 						<div class="form-group">
-					      <label class="col-md-4 control-label" for="password">Password</label>
-					      <div class="col-md-4">
-					      <input id="password" name="password" type="password" class="form-control input-md" required="">					    
-					      </div>
-					    </div>
+						  <label class="col-md-4 control-label" for="zipcode">Zip Code</label>  
+						  <div class="col-md-4">
+						  <input id="zipcode" name="zipcode" type="text" pattern="\d{5}" placeholder="00000" title="Formato del Zip Code; 00000." class="form-control input-md" required="">
+						  </div>
+						</div>
+												
 						
 						<!-- Button -->
 						<div class="form-group">
 						  <label class="col-md-4 control-label" for="iniciar"></label>
 						  <div class="col-md-4">
-						    <button id="iniciar" name="iniciar" class="btn btn-primary">Iniciar</button>
-						    <input type="reset" value="Borrar datos">
+						    <button id="enviarpw" name="enviarpw" type="submit" class="btn btn-primary">Enviar contraseña</button>
 						  </div>
 						</div>
-						
+						<p>Al oprimir botón se te enviara tu contraseña a la dirección de correo electrónico puesto.</p>
 						</fieldset>
 										
 					</form>
 														
  				</div>
 				<hr>
-				
-				<h3>¿Se te olvido la contraseña?<a href="recuperacionpw.php"> Haga un click aquí.</a></h3>                    
+								
 				<h3>¿No eres un usuario?<a href="registracion.php"> Favor de registrarse aquí.</a></h3>
+				<h3>¿Desea iníciate?<a href="iniciarseccion.php"> Haga un click aquí.</a></h3>
 				
 					
 			</form>		

@@ -127,6 +127,7 @@
 				<hr>
 								
 				<h3>¿No eres un usuario?<a href="registracion.php"> Favor de registrarse aquí.</a></h3>
+				<h3>¿Desea iníciate?<a href="iniciarseccion.php"> Haga un click aquí.</a></h3>
 				
 					
 			</form>		

@@ -1,4 +1,3 @@
-<!-- Database connection script -->>
 <?php
 		// Database conection configuration
 		$servername = "10.30.84.161";
@@ -9,33 +8,37 @@
 		// database connection error handeler
 		$conn = mysqli_connect($servername, $username, $password, $database);
 			if (!$conn)
-			{
-				header('Location: /errorconn.html');
-				exit;
-			}
+				{
+					header('Location: /errorconn.html');
+					exit;
+				}
 		
 		//Starting all of the variables connections in and out of this php page.
 		session_start();
 				
-		//Get data from user					
+		//Getting data from iniciacion.php
 		$value1 = $_POST['email'];
 		$value2 = $_POST['zipcode'];
 		
-		//Get the data from the informacionpersonal database.								
-		$sql = "SELECT email, zipcode FROM informacionpersonal WHERE email = '$value1' ";
+		//Passing email value onto perfil.php for the query data selection.
+		$_SESSION['value1'] = $value1;
 			
-		//Notification to see if the data input is valid, if so, generate automatic email.
-		if ($conn->query($sql) === TRUE)
-		{
-			echo "Paso la prueba";
-		}
+		//Querry email, and password validation else error connection.
+		$sql = "SELECT email, zipcode, password FROM informacionpersonal WHERE email = '$value1' AND zipcode = '$value2' ";
+		$result = $conn->query($sql);
 		
+		if ($result -> num_rows > 0)
+		{
+			while($row = $result->fetch_assoc()) {
+				echo $row["password"];
+			}
+		}
+		 
 		else
 		{
-			echo "No paso la prueba";
+			header('Location: /recuperacionpwerror.php');
 		}
 		
-						
 		$conn->close();
 						
 ?>

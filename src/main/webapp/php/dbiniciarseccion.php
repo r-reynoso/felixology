@@ -37,6 +37,6 @@
 		{
 			header('Location: /iniciarseccionerror.php');
 		}
-	
+		
 		$conn->close();
 ?>

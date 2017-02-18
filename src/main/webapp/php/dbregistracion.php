@@ -59,7 +59,6 @@
 				header('Location: /errorconn.html');				
 			}
 		
-				
 		$conn->close();
 						
 ?>
