@@ -30,7 +30,15 @@
 		if ($result -> num_rows > 0)
 		{
 			while($row = $result->fetch_assoc()) {
-				echo $row["password"];
+				
+				$pw = $row["password"];
+				
+				$to = "$value1";
+				$subject = "Recuperacion Password";
+				$txt = "Su contrasena es $pw."  ;
+				$headers = "From: Rayaera" . "\r\n" .	"CC: somebodyelse@example.com";
+				
+				mail($to,$subject,$txt,$headers);
 			}
 		}
 		 

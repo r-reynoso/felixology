@@ -106,8 +106,8 @@
 	        //Getting other value from other php file.
 	        $value1 = $_SESSION['value1']; //value coming from dbiniciarseccion.php
 	        $value9 = $_SESSION['value9']; //value coming from dbregistracion.php
-	        $_SESSION['email'] = $value1;
-	        
+	        $_SESSION["email"] = $value1;
+	        setcookie('perfil', '');
 	        
 	  ?>  
 
