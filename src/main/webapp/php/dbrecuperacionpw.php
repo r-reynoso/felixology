@@ -1,4 +1,7 @@
 <?php
+		//Starting all of the variables connections in and out of this php page.
+		session_start();
+		
 		// Database conection configuration
 		$servername = "10.30.84.161";
 		$username = "rayaera";
@@ -13,9 +16,6 @@
 					exit;
 				}
 		
-		//Starting all of the variables connections in and out of this php page.
-		session_start();
-				
 		//Getting data from iniciacion.php
 		$value1 = $_POST['email'];
 		$value2 = $_POST['zipcode'];

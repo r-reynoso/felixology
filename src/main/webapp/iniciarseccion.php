@@ -1,3 +1,7 @@
+<?php
+	//Starting all of the variables connections in and out of this php page.
+	session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->

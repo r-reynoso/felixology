@@ -35,7 +35,7 @@
 		$value16 = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 		
 		//Passing email value onto perfil.php for the query data selection.		
-		$_SESSION['value9'] = $value9;		
+		$_SESSION["value9"] = $value9;		
 		
 		//Querry incert data into database								
 		$sql = "INSERT INTO informacionpersonal (nombre, apellidopaterno, apellidomaterno, genero, fechanacimiento, pies, pulgadas, peso,

@@ -1,3 +1,8 @@
+<?php
+	//Starting all of the variables connections in and out of this php page.
+	session_start();
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
@@ -100,14 +105,12 @@
 			   	  }	
 		   	 
 	        	
-	        //Starting all of the variables connections in and out of this php page.
-	        session_start();
+	        
 	          
 	        //Getting other value from other php file.
-	        $value1 = $_SESSION['value1']; //value coming from dbiniciarseccion.php
-	        $value9 = $_SESSION['value9']; //value coming from dbregistracion.php
-	        $_SESSION["email"] = $value1;
-	        setcookie('perfil', '');
+	        $value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php
+	        $value9 = $_SESSION["value9"]; //value coming from dbregistracion.php
+	        
 	        
 	  ?>  
 
