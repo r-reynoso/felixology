@@ -1,4 +1,7 @@
 <?php
+		//Starting all of the variables connections in and out of this php page.
+		session_start();
+		
 		// Database conection configuration
 		$servername = "10.30.84.161";
 		$username = "rayaera";
@@ -12,9 +15,6 @@
 				header('Location: /errorconn.html');
 				exit;
 			}
-
-		//Starting all of the variables connections in and out of this php page.		
-		session_start();
 						
 		//Incert data into database					
 		$value1 = $_POST['nombre'];
