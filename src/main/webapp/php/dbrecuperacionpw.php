@@ -20,8 +20,11 @@
 		$value1 = $_POST['email'];
 		$value2 = $_POST['zipcode'];
 		
-		//Passing email value onto perfil.php for the query data selection.
-		$_SESSION['value1'] = $value1;
+		//Setting a random number for user email validation
+		$randnumber = rand(10000,99999);
+				
+		//Passing randnumber value onto dbvalidacionpw.php for the email validation.
+		$_SESSION["randnumber"] = $randnumber;
 			
 		//Querry email, and password validation else error connection.
 		$sql = "SELECT email, zipcode, password FROM informacionpersonal WHERE email = '$value1' AND zipcode = '$value2' ";
@@ -31,20 +34,12 @@
 		{
 			while($row = $result->fetch_assoc()) {
 				
-				$pw = $row["password"];
-				
 				$to = "$value1";
 				$subject = "Recuperacion Password";
-				$message = 
-				"
-						
-						
-				";
+				$message = "Numero de validacion es $randnumber.";	
 				$headers = "From: Rayaera" . "\r\n" .	"CC: somebodyelse@example.com";
 				
-				mail($to,$subject,$message,$headers); 
-				
-				
+				mail($to,$subject,$message,$headers);			
 				
 			}
 		}
