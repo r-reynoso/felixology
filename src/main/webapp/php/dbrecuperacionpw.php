@@ -23,7 +23,7 @@
 		//Setting a random number for user email validation
 		$randnumber = rand(10000,99999);
 				
-		//Passing randnumber value onto dbvalidacionpw.php for the email validation.
+		//Passing randnumber value onto validacionpw.php for the email validation.
 		$_SESSION["randnumber"] = $randnumber;
 			
 		//Querry email, and password validation else error connection.
@@ -39,7 +39,9 @@
 				$message = "Numero de validacion es $randnumber.";	
 				$headers = "From: Rayaera" . "\r\n" .	"CC: somebodyelse@example.com";
 				
-				mail($to,$subject,$message,$headers);			
+				mail($to,$subject,$message,$headers);
+
+				header('Location: /validacionpw.php');
 				
 			}
 		}

@@ -110,15 +110,16 @@
 						  </div>
 						</div>
 												
+						<p>Al oprimir botón se te enviara un numero de validacion a la dirección de correo electrónico puesto.</p>
 						
 						<!-- Button -->
 						<div class="form-group">
 						  <label class="col-md-4 control-label" for="iniciar"></label>
 						  <div class="col-md-4">
-						    <button id="enviarpw" name="enviarpw" type="submit" class="btn btn-primary">Enviar contraseña</button>
+						    <button id="enviarpw" name="enviarpw" type="submit" class="btn btn-primary">Enviar</button>
 						  </div>
 						</div>
-						<p>Al oprimir botón se te enviara tu contraseña a la dirección de correo electrónico puesto.</p>
+						
 						</fieldset>
 										
 					</form>
