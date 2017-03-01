@@ -78,7 +78,7 @@
       
          <div class="row add-bottom">
 		 
-			<form class="form-horizontal" action="php/dbrecuperacionpw.php" method="post">
+			<form class="form-horizontal" action="php/dbvalidacionpw.php" method="post">
 				
 				<!-- Form Name -->
 					<div class="row section-head">
