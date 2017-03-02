@@ -17,38 +17,22 @@
 				}
 		
 		//Getting data from validacion.php
-		$validacion = $_POST['validacion'];
-		
+		$validacion = $_POST['validacion'];		
 		
 		//Getting random number from dbrecuperacionpw.php
-		$randnumber = $_SESSION["randnumber"];
-				
-		echo "$validacion"; 
-		echo "$randnumber";	
-		/*Querry email, and password validation else error connection.
-		$sql = "SELECT email, zipcode, password FROM informacionpersonal WHERE email = '$value1' AND zipcode = '$value2' ";
-		$result = $conn->query($sql);
+		$randnumber = $_SESSION["randnumber"];				
 		
-		if ($result -> num_rows > 0)
+		//Querry email, and password validation else error connection.		
+		
+		if ($validacion == $randnumber)
 		{
-			while($row = $result->fetch_assoc()) {
-				
-				$to = "$value1";
-				$subject = "Recuperacion Password";
-				$message = "Numero de validacion es $randnumber.";	
-				$headers = "From: Rayaera" . "\r\n" .	"CC: somebodyelse@example.com";
-				
-				mail($to,$subject,$message,$headers);
-
-				header('Location: /validacionpw.php');
-				
-			}
+			header('Location: /cambiopw.php');
 		}
 		 
 		else
 		{
 			header('Location: /recuperacionpwerror.php');
-		}*/
+		}
 		
 		$conn->close();
 						
