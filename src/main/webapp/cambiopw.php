@@ -118,7 +118,7 @@
 						<div class="form-group">
 						  <label class="col-md-4 control-label" for="iniciar"></label>
 						  <div class="col-md-4">
-						    <button id="cambiar" name="cambiar" class="btn btn-primary">Cambiar</button>
+						    <button id="cambiar" name="cambiar" class="btn btn-primary" onClick="pwv()">Cambiar</button>
 						    <input type="reset" value="Borrar datos">
 						  </div>
 						</div>
