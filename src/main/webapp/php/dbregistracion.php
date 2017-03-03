@@ -16,7 +16,8 @@
 				exit;
 			}
 						
-		//Incert data into database					
+		//Incert data into database	
+		//Getting values form registracion.php
 		$value1 = $_POST['nombre'];
 		$value2 = $_POST['apellidopaterno'];
 		$value3 = $_POST['apellidomaterno'];

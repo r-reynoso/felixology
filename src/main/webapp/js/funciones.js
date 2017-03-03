@@ -27,17 +27,6 @@ function imc()
 	 				}
  				
  		}
-function pwv()
-		{
-			var passwordForm1 = document.getElementById('password').value;
-			var passwordForm2 = document.getElementById('password2').value;
-			
-				if(passwordForm1 != passwordForm2)
-					{
-					alertify.alert("Contrasena no es igual.");
-					}
-							
-		}
 
 function alert1()
 		{
