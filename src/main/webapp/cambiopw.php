@@ -102,7 +102,7 @@
 						<div class="form-group">
 					      <label class="col-md-4 control-label" for="password">Escribir contrasena</label>
 					      <div class="col-md-4">
-					      <input id="password1" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos una letra mayúscula y minúscula, un número, un caracter especial y no menos de 8 caracteres." class="form-control input-md" required="">					    
+					      <input id="password1" name="password1" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos una letra mayúscula y minúscula, un número, un caracter especial y no menos de 8 caracteres." class="form-control input-md" required="">					    
 					      </div>
 					    </div>						
 						
