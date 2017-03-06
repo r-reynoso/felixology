@@ -21,18 +21,24 @@
 		$value1 = md5($_POST['password1']);
 		$value2 = md5($_POST['password2']);
 		$value3 = $_SESSION["email"];
-
-		echo "$value1......$value2......$value3";
-
+	
+		//Querry to change user password in database
+		$sql = "UPDATE informacionpersonal SET password = '$value1' WHERE email = '$value3'";
+		
 		if($value1 == $value2)			
 		{					
-			//Querry incert data into database								
-			$sql = "UPDATE informacionpersonal SET password '$value1' WHERE email = '$value3'";
-			echo"Paso la Prueba";					
+			if ($conn->query($sql) === TRUE)
+			{
+				header('Location: /iniciarseccion1.php');
+			}
+			else
+			{
+				header('Location: /errorconn.html');
+			}					
 		}
 		else 		
 		{
-			echo"No paso Prueba";
+			header('Location: /recuperacionpwerror1.php');
 		}
 		
 		$conn->close();
