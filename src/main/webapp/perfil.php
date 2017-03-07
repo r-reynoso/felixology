@@ -32,6 +32,7 @@
    <link rel="stylesheet" href="css/alertify.core.css">
    <link rel="stylesheet" href="css/alertify.bootstrap.css">
    
+   
    <!-- Script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
@@ -192,15 +193,15 @@
 			    
 	        ?>	        
 	          	
-        </div> 
- 
+        </div>
+   
         <hr>
          
      </div> <!-- Row End-->
-
-      
+     
+          
    </section> <!-- Style Guide Section End-->
-   
+  
    <!-- Footer
    ================================================== -->
    <footer>
