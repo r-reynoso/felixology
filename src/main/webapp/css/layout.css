@@ -18,7 +18,7 @@
    j. Footer
    k. lightbox
    l. Table
-
+      
    todo: check bug in mobile z-index
 
 ===================================================================== */
@@ -986,3 +986,5 @@ table.spacing {
 	border-collapse: separate;
 	border-spacing: 60px 10px;
 	}
+
+

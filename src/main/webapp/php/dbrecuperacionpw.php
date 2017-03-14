@@ -25,6 +25,7 @@
 				
 		//Passing randnumber value onto validacionpw.php for the email validation.
 		$_SESSION["randnumber"] = $randnumber;
+		$_SESSION["email"] = $value1;
 			
 		//Querry email, and password validation else error connection.
 		$sql = "SELECT email, zipcode, password FROM informacionpersonal WHERE email = '$value1' AND zipcode = '$value2' ";

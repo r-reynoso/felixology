@@ -82,11 +82,11 @@
       
          <div class="row add-bottom">
 		 
-			<form class="form-horizontal" action="php/dbcambiopw.php" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="php/dbiniciarseccion.php" method="post" enctype="multipart/form-data">
 				
 				<!-- Form Name -->
 					<div class="row section-head">
-						<h2>Cambiar contrasena</h2>
+						<h2>Contrasena cambiada exitosamente</h2>
 					</div>
 					
 					<hr>
@@ -98,19 +98,19 @@
 					<form class="form-horizontal">
 						<fieldset>
 						
+						<!-- Text input-->
+						<div class="form-group">
+					  	  <label class="col-md-4 control-label" for="email">E-mail</label>  
+					  	  <div class="col-md-4">
+					      <input id="email" name="email" type="email" class="form-control input-md" required="">
+					      </div>
+					    </div>
+						
 						<!-- Password input-->
 						<div class="form-group">
-					      <label class="col-md-4 control-label" for="password">Escribir contrasena</label>
+					      <label class="col-md-4 control-label" for="password">Password</label>
 					      <div class="col-md-4">
-					      <input id="password1" name="password1" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos una letra mayúscula y minúscula, un número, un caracter especial y no menos de 8 caracteres." class="form-control input-md" required="">					    
-					      </div>
-					    </div>						
-						
-						<!-- Password input 2-->
-						<div class="form-group">
-					      <label class="col-md-4 control-label" for="password">Re-Escribir contrasena</label>
-					      <div class="col-md-4">
-					      <input id="password2" name="password2" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos una letra mayúscula y minúscula, un número, un caracter especial y no menos de 8 caracteres." class="form-control input-md" required="">					    
+					      <input id="password" name="password" type="password" class="form-control input-md" required="">					    
 					      </div>
 					    </div>
 						
@@ -118,7 +118,7 @@
 						<div class="form-group">
 						  <label class="col-md-4 control-label" for="iniciar"></label>
 						  <div class="col-md-4">
-						    <button id="cambiar" name="cambiar" class="btn btn-primary">Cambiar</button>
+						    <button id="iniciar" name="iniciar" class="btn btn-primary">Iniciar</button>
 						    <input type="reset" value="Borrar datos">
 						  </div>
 						</div>
@@ -129,7 +129,8 @@
 														
  				</div>
 				<hr>
-								                    
+				
+				<h3>¿Se te olvido la contraseña?<a href="recuperacionpw.php"> Haga un click aquí.</a></h3>                    
 				<h3>¿No eres un usuario?<a href="registracion.php"> Favor de registrarse aquí.</a></h3>
 				
 					

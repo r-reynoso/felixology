@@ -1,7 +1,3 @@
-<?php
-	//Starting all of the variables connections in and out of this php page.
-	session_start();
-?>
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
@@ -12,7 +8,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-   <title>Iniciar sección</title>
+   <title>Recuperación de contraseña</title>
    <meta name="description" content="">  
    <meta name="author" content="">
 
@@ -82,11 +78,11 @@
       
          <div class="row add-bottom">
 		 
-			<form class="form-horizontal" action="php/dbcambiopw.php" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="php/dbrecuperacionpw.php" method="post">
 				
 				<!-- Form Name -->
 					<div class="row section-head">
-						<h2>Cambiar contrasena</h2>
+						<h2>Contrasena y Re-contrasena no es igual, intente nuevamente.</h2>
 					</div>
 					
 					<hr>
@@ -98,28 +94,29 @@
 					<form class="form-horizontal">
 						<fieldset>
 						
-						<!-- Password input-->
+						<!-- Text input-->
 						<div class="form-group">
-					      <label class="col-md-4 control-label" for="password">Escribir contrasena</label>
-					      <div class="col-md-4">
-					      <input id="password1" name="password1" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos una letra mayúscula y minúscula, un número, un caracter especial y no menos de 8 caracteres." class="form-control input-md" required="">					    
-					      </div>
-					    </div>						
+						  <label class="col-md-4 control-label" for="email">E-mail</label>  
+						  <div class="col-md-4">
+						  <input id="email" name="email" type="email" class="form-control input-md" required="">
+						  </div>
+						</div>
 						
-						<!-- Password input 2-->
+						<!-- Text input-->
 						<div class="form-group">
-					      <label class="col-md-4 control-label" for="password">Re-Escribir contrasena</label>
-					      <div class="col-md-4">
-					      <input id="password2" name="password2" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos una letra mayúscula y minúscula, un número, un caracter especial y no menos de 8 caracteres." class="form-control input-md" required="">					    
-					      </div>
-					    </div>
+						  <label class="col-md-4 control-label" for="zipcode">Zip Code</label>  
+						  <div class="col-md-4">
+						  <input id="zipcode" name="zipcode" type="text" pattern="\d{5}" placeholder="00000" title="Formato del Zip Code; 00000." class="form-control input-md" required="">
+						  </div>
+						</div>
+												
+						<p>Al oprimir botón se te enviara un numero de validacion a la dirección de correo electrónico puesto.</p>
 						
 						<!-- Button -->
 						<div class="form-group">
 						  <label class="col-md-4 control-label" for="iniciar"></label>
 						  <div class="col-md-4">
-						    <button id="cambiar" name="cambiar" class="btn btn-primary">Cambiar</button>
-						    <input type="reset" value="Borrar datos">
+						    <button id="enviarpw" name="enviarpw" type="submit" class="btn btn-primary">Enviar</button>
 						  </div>
 						</div>
 						
@@ -129,8 +126,9 @@
 														
  				</div>
 				<hr>
-								                    
+								
 				<h3>¿No eres un usuario?<a href="registracion.php"> Favor de registrarse aquí.</a></h3>
+				<h3>¿Desea iníciate?<a href="iniciarseccion.php"> Haga un click aquí.</a></h3>
 				
 					
 			</form>		
