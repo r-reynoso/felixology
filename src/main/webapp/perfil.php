@@ -133,16 +133,7 @@
 			  <div class="row add-bottom">
 			  
 			  	<hr>				
-				
-				  <div class="tab">
-					<button class="tablinks" onclick="openTab(event, 'Perfil')">Perfil</button>
-					<button class="tablinks" onclick="openTab(event, 'Cross Training')">Cross Training</button>
-					<button class="tablinks" onclick="openTab(event, 'Rutinas')">Rutinas</button>
-					<button class="tablinks" onclick="openTab(event, 'Dieta')">Dieta</button>
-				  </div>
-				  
-				<hr>  
-			  
+						  
 				<div id="Perfil" class="tabcontent"> 
 			 
 					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
@@ -198,90 +189,13 @@
 					</div>
 					
 				</div>
-				
-				<div id="Cross Training" class="tabcontent">
-  					<h3>Cross Training</h3>
-  					<p>Cross Training</p>
-				</div>
-				
-				<div id="Rutinas" class="tabcontent">
-  					<h3>Rutinas</h3>
-  					<p>Rutinas</p>
-				</div>
-				
-				<div id="Dieta" class="tabcontent">
-  					<h3>Dieta</h3>
-  					<p>Dieta</p>
-				</div>
-				   
-				<hr>
-				 
-			  </div> <!-- Row End-->		 
+								   
+				<hr>		  		 
 			  
-	   </section> <!-- Style Guide Section End-->
-	  
-	   <!-- Footer
-	   ================================================== -->
-	   <footer>
-
-		  <div class="row">         
-
-			 <div class="six columns info">
-			 
-				<img src="images/logo1.png"/>
-				<p class="copyright">&copy; Rayaera.net. Todos los derechos reservados 2015.
-				Diseño por <a title="Styleshout" href="http://www.styleshout.com/">Styleshout.</a>
-				Fundada en el año 2009 por Félix López Santiago.
-				</p>
-										  
-			 </div>
-
-			 <div class="six columns right-cols">
-
-				<div class="row">
-
-				   <div class="columns">
-					  <h3 class="address">Visítanos</h3>
-					  <p>
-					  Ave Ramirez de<br> 
-					  Arellano Centro <br> 
-					  Deportivo Torrimar<br>
-					  Guaynabo Puerto Rico,<br>
-					  00966.
-					  </p>
-				   </div>
-
-				   <div class="columns">
-					  <h3 class="social">Socializar</h3>
-					  <ul>
-						 <li><a href="https://www.facebook.com/pages/Rayaera-Personal-Training-Network/489611624406124?ref=br_tf">Facebook</a></li>
-						 <li><a href="https://twitter.com/Rayaerapr">Twitter</a></li>
-						 <li><a href="http://instagram.com/rayaerarunner/">Instagram</a></li>
-					  </ul>
-				   </div>
-
-				   <div class="columns last">
-					  <h3 class="contact">Contáctenos</h3>
-					  <ul>
-						<li><a href="tel:787-349-7945">787-349-7945</a></li>
-						<li><a href="mailto:felixlopez@rayaera.net">felixlopez@rayaera.net</a></li>
-					  </ul>
-				   </div>
-
-				</div> <!-- Nested Row End -->
-
-			 </div>
-
-			 
-				
-			 <div id="go-top">
-				<a class="smoothscroll" title="Back to Top" href="#styles"><i class="icon-up-open"></i></a>
-			 </div>
-
-		  </div> <!-- Row End -->
-
-	   </footer> <!-- Footer End-->
-	   
+	   </section> <!-- Style Guide Section End-->	  
+	    
+	   <!-- Footer va aqui
+	   ================================================== -->	   
 	   
 	   <!-- Java Script
 	   ================================================== -->

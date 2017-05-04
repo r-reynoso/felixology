@@ -122,14 +122,14 @@
 						</fieldset>
 										
 					</form>
+					
+					<h3>¿Se te olvido la contraseña?<a href="recuperacionpw.php"> Haga un click aquí.</a></h3>                    
+					<h3>¿No eres un usuario?<a href="registracion.php"> Favor de registrarse aquí.</a></h3>
 														
  				</div>
+ 				
 				<hr>
-				
-				<h3>¿Se te olvido la contraseña?<a href="recuperacionpw.php"> Haga un click aquí.</a></h3>                    
-				<h3>¿No eres un usuario?<a href="registracion.php"> Favor de registrarse aquí.</a></h3>
-				
-					
+								
 			</form>		
 			
          </div>
@@ -139,66 +139,7 @@
 
    
    <!-- Footer
-   ================================================== -->
-   <footer>
-
-      <div class="row">         
-
-         <div class="six columns info">
-         
-			<img src="images/logo1.png"/>
-			<p class="copyright">&copy; Rayaera.net. Todos los derechos reservados 2015.
-			Diseño por <a title="Styleshout" href="http://www.styleshout.com/">Styleshout.</a>
-			Fundada en el año 2009 por Félix López Santiago.
-			</p>
-		 			 	              
-         </div>
-
-         <div class="six columns right-cols">
-
-            <div class="row">
-
-               <div class="columns">
-                  <h3 class="address">Visítanos</h3>
-                  <p>
-                  Ave Ramirez de<br> 
-                  Arellano Centro <br> 
-                  Deportivo Torrimar<br>
-                  Guaynabo Puerto Rico,<br>
-                  00966.
-                  </p>
-               </div>
-
-               <div class="columns">
-                  <h3 class="social">Socializar</h3>
-                  <ul>
-                     <li><a href="https://www.facebook.com/pages/Rayaera-Personal-Training-Network/489611624406124?ref=br_tf">Facebook</a></li>
-                     <li><a href="https://twitter.com/Rayaerapr">Twitter</a></li>
-                     <li><a href="http://instagram.com/rayaerarunner/">Instagram</a></li>
-                  </ul>
-               </div>
-
-               <div class="columns last">
-                  <h3 class="contact">Contáctenos</h3>
-                  <ul>
-                    <li><a href="tel:787-349-7945">787-349-7945</a></li>
-                    <li><a href="mailto:felixlopez@rayaera.net">felixlopez@rayaera.net</a></li>
-                  </ul>
-               </div>
-
-            </div> <!-- Nested Row End -->
-
-         </div>
-
-         
-		 	
-        <div id="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#features"><i class="icon-up-open"></i></a>
-         </div>
-
-      </div> <!-- Row End -->
-
-   </footer> <!-- Footer End--> 
+   ================================================== -->  
 
 
    <!-- Java Script
