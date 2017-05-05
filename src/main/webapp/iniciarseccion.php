@@ -95,7 +95,7 @@
 				<!-- Text input-->
 				<div class="six columns add-bottom"> 
 				
-					<form class="form-horizontal">
+					
 						<fieldset>
 						
 						<!-- Text input-->
@@ -125,7 +125,7 @@
 						
 						</fieldset>
 										
-					</form>
+					
 					
 					<h3>¿Se te olvido la contraseña?<a href="recuperacionpw.php"> Haga un click aquí.</a></h3>                    
 				    <h3>¿No eres un usuario?<a href="registracion.php"> Favor de registrarse aquí.</a></h3>	
