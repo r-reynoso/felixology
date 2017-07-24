@@ -18,11 +18,11 @@
 			
 		//----------------------------------------------------------------------------
 		
-		//Getting data from iniciacion.php
+		//Getting data from iniciarseccion.php
 		$value1 = $_POST['email'];
 		$value2 = md5($_POST['password']);
 		
-		//Passing email value onto perfil.php for the query data selection.
+		//Passing email value onto perfilinfo.php for the query data selection.
 		$_SESSION["value1"] = $value1;
 			
 		//Querry email, and password validation else error connection.
@@ -31,7 +31,7 @@
 		
 		if ($result -> num_rows > 0)		
 		{
-			header('Location: /perfil.php');
+			header('Location: /perfilinfo.php');
 		} 
 		else 
 		{

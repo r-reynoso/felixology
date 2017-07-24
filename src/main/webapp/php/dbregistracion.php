@@ -48,7 +48,7 @@
 		
 		if ($conn->query($sql) === TRUE)
 			{
-				header('Location: /perfil.php');
+				header('Location: /perfilinfo.php');
 			} 
 				
 		elseif($conn->errno == 1062) 

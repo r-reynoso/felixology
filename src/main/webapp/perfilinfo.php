@@ -69,6 +69,8 @@
 			 <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
 			 <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
 			 <ul id="nav" class="nav">
+			 	<li><a href="perfildieta.php">Dieta</a></li>
+			 	<li><a href="perfilrutina.php">Rutinas</a></li>
 				<li><a href="php/salir.php">Salir</a></li>
 			 </ul> <!-- end #nav -->
 		  </nav> <!-- end #nav-wrap -->
@@ -104,7 +106,11 @@
 				
 			//Getting other value from other php file.
 				$value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php
-				$value9 = $_SESSION["value9"]; //value coming from dbregistracion.php					
+				$value9 = $_SESSION["value9"]; //value coming from dbregistracion.php
+
+			//Passing email value onto other .php file to keep open the session.
+				$_SESSION["value1"] = $value1;
+				$_SESSION["value9"] = $value9;
 		  ?>  
 
 			  <div class="row section-head"> <!-- Nombre del usuario -->
@@ -183,7 +189,7 @@
 								echo "No hay datos";
 							}
 							
-							session_destroy();
+							//session_destroy();
 							$conn->close();							
 						?>						
 					</div>
