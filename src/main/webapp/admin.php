@@ -16,7 +16,7 @@
 	   <!--- Basic Page Needs
 	   ================================================== -->
 	   <meta charset="utf-8">
-	   <title>Tu perfil</title>
+	   <title>Rayaera Admin</title>
 	   <meta name="description" content="">  
 	   <meta name="author" content="">
 
@@ -68,9 +68,7 @@
 		  <nav id="nav-wrap">		 
 			 <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
 			 <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
-			 <ul id="nav" class="nav">
-			 	<li><a href="perfilinfo.php">Informacion</a></li>
-			 	<li><a href="perfilrutina.php">Rutinas</a></li>
+			 <ul id="nav" class="nav">			 				 	
 				<li><a href="php/salir.php">Salir</a></li>
 			 </ul> <!-- end #nav -->
 		  </nav> <!-- end #nav-wrap -->
@@ -103,14 +101,7 @@
 				header('Location: /errorconn.html');
 				exit;
 				}
-				
-			//Getting other value from other php file.
-				$value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php
-				$value9 = $_SESSION["value9"]; //value coming from dbregistracion.php	
-
-			//Passing email value onto other .php file to keep open the session.
-				$_SESSION["value1"] = $value1;
-				$_SESSION["value9"] = $value9;
+			
 		  ?>  
 
 			  <div class="row section-head"> <!-- Nombre del usuario -->
@@ -118,18 +109,7 @@
 				<h1>
 				
 					<?php
-						 // query         		
-						 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
-						 $result = $conn->query($sql);
-							
-						 if ($result->num_rows > 0) {
-							// output data of each row
-							while($row = $result->fetch_assoc()) {
-								echo $row["nombre"]. "  " . $row["apellidopaterno"]. "  " . $row["apellidomaterno"] ;
-							}
-						 } else {
-							echo "No hay datos";
-						 }
+						echo "Rayaera Admin";		
 					?>
 					
 				</h1>
@@ -144,15 +124,32 @@
 			 
 					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
 						<?php 
-							echo "Dieta";						
+						echo "Title 1";
 						?>						
 					</div>
 					
 					<div class="six columns right"> <!-- Lado dereco de la pantalla -->
-						<?php		        
-							echo "Dieta";
+						<?php	        
+						echo "Input 1";
+						?>						
+					</div>
+					
+				</div>
+				
+				<div id="Perfil" class="tabcontent"> 
+			 
+					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
+						<?php 
+						echo "Title 2";
+						?>						
+					</div>
+					
+					<div class="six columns right"> <!-- Lado dereco de la pantalla -->
+						<?php	        
+														
+							echo "Input 2";
 							
-							//session_destroy();
+							session_destroy();
 							$conn->close();							
 						?>						
 					</div>
@@ -183,3 +180,4 @@
 	</body>
 
 </html>
+

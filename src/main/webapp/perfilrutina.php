@@ -69,8 +69,8 @@
 			 <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
 			 <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
 			 <ul id="nav" class="nav">
-			 	<li><a href="">Dieta</a></li>
-			 	<li><a href="">Rutinas</a></li>
+			 	<li><a href="perfilinfo.php">Informacion</a></li>
+			 	<li><a href="perfildieta.php">Dieta</a></li>
 				<li><a href="php/salir.php">Salir</a></li>
 			 </ul> <!-- end #nav -->
 		  </nav> <!-- end #nav-wrap -->
@@ -144,50 +144,13 @@
 			 
 					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
 						<?php 
-							// query							
-							$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
-							$result = $conn->query($sql);
-							 
-							if ($result->num_rows > 0)
-							{
-								// output data of each row
-								while($row = $result->fetch_assoc()) {
-									echo '<img src="data:image/jpeg;base64,'.base64_encode($row['imagen'] ).'" width="200" height="200"/>';
-								}							 
-							}
-							else
-							{
-								echo "No hay datos";
-							}						
+							echo"Rutina";					
 						?>						
 					</div>
 					
 					<div class="six columns right"> <!-- Lado dereco de la pantalla -->
 						<?php		        
-							// query							
-							$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
-							$result = $conn->query($sql);
-							 
-							if ($result->num_rows > 0)
-							{
-								// output data of each row
-								while($row = $result->fetch_assoc()) {
-															
-									$pies = $row["pies"];                    //Cojer data de la base de datos y enviarlo a una variable
-									$pulgadas = $row["pulgadas"];
-									$peso = $row["peso"];
-									
-									$altura = $pies * 12 + $pulgadas;		 //Calcular indice de masa corporal.
-									$imc = ($peso / pow($altura,2)) * 703;
-									$imcf = number_format((float)$imc,1);
-									
-									echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;									
-								}
-							}
-							else
-							{
-								echo "No hay datos";
-							}
+							echo"Rutina";
 							
 							//session_destroy();
 							$conn->close();							

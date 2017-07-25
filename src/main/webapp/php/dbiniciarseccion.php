@@ -26,17 +26,23 @@
 		$_SESSION["value1"] = $value1;
 			
 		//Querry email, and password validation else error connection.
-		$sql = "SELECT email, password From informacionpersonal WHERE email = '$value1' AND password = '$value2' ";		
-		$result = $conn->query($sql);
+			
+			$sql = "SELECT email, password From informacionpersonal WHERE email = '$value1' AND password = '$value2'";		
+			$result = $conn->query($sql);
+			
+			if ($value1 == 'admin@rayaera.com' and $value2 == 'cad3ec6cf88a83af22d58c462bd2721c')
+			{
+				header('Location: /admin.php');
+			}
+			elseif ($result -> num_rows > 0)		
+			{
+				header('Location: /perfilinfo.php');
+			} 
+			else
+			{
+				header('Location: /iniciarseccionerror.php');
+			}
 		
-		if ($result -> num_rows > 0)		
-		{
-			header('Location: /perfilinfo.php');
-		} 
-		else 
-		{
-			header('Location: /iniciarseccionerror.php');
-		}
 		
 		$conn->close();
 ?>
