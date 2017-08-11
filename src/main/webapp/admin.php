@@ -86,7 +86,7 @@
 	   ================================================== -->
 	  
 	   <section id="styles" style="padding: 90px 0 72px; background: #fff;">
-	   
+	   <form class="form-horizontal" action="php/dbiniciarseccion.php" method="post" enctype="multipart/form-data">
 		  <?php		  
 			// Database conection configuration
 				$servername = "10.30.84.161";
@@ -106,12 +106,10 @@
 
 			  <div class="row section-head"> <!-- Nombre del usuario -->
 
-				<h1>
-				
+				<h1>					
 					<?php
 						echo "Rayaera Admin";		
-					?>
-					
+					?>					
 				</h1>
 
 			  </div> <!-- Row End-->
@@ -122,42 +120,47 @@
 						  
 				<div id="Perfil" class="tabcontent"> 
 			 
-					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
-						<?php 
-						echo "Title 1";
-						?>						
+					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->					
+						<label>Seleccione nombre del cliente:</label>												
 					</div>
 					
 					<div class="six columns right"> <!-- Lado dereco de la pantalla -->
+						<select name="name">						
 						<?php	        
-						echo "Input 1";
-						?>						
+ 							// query y selecion de nombre y apellido en un dropdown list         		
+						 	$sql = "SELECT nombre, apellidopaterno, email FROM informacionpersonal";
+						 	$result = $conn->query($sql);
+						 							
+							 if ($result->num_rows > 0) {
+								// output data of each row						 	
+								while($row = $result->fetch_assoc())
+								{																		
+									echo "<option value='" . $row['nombre'] , $row["apellidopaterno"] . "'>" . $row['nombre']  , " " , $row["apellidopaterno"] . "</option>";
+								}
+							 }
+							  else
+							 {
+								echo "No hay datos";	
+							 }
+							 
+							 //Getting data from iniciarseccion.php
+							 $value1 = $_POST['email'];
+							 $value2 = md5($_POST['password']);					 
+							 
+											
+						 ?>	
+						 </select>					
 					</div>
 					
-				</div>
-				
-				<div id="Perfil" class="tabcontent"> 
-			 
-					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
-						<?php 
-						echo "Title 2";
-						?>						
-					</div>
-					
-					<div class="six columns right"> <!-- Lado dereco de la pantalla -->
-						<?php	        
-														
-							echo "Input 2";
-							
-							session_destroy();
-							$conn->close();							
-						?>						
-					</div>
-					
-				</div>
+					<div class="six columns right">
+					    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Submit">Selecionar</button>					    
+					</div>					
+								
+				</div>			
 								   
-				<hr>		  		 
-			  
+				<hr>		
+					  		 
+	   </form>		  
 	   </section> <!-- Style Guide Section End-->	  
 	    
 	   <!-- Footer va aqui

@@ -30,7 +30,7 @@
 			$sql = "SELECT email, password From informacionpersonal WHERE email = '$value1' AND password = '$value2'";		
 			$result = $conn->query($sql);
 			
-			if ($value1 == 'admin@rayaera.com' and $value2 == 'cad3ec6cf88a83af22d58c462bd2721c')
+			if ($value1 == 'admin@rayaera.net' and $value2 == 'cad3ec6cf88a83af22d58c462bd2721c')
 			{
 				header('Location: /admin.php');
 			}
