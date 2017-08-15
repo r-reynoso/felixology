@@ -107,7 +107,13 @@
 			//Getting other value from other php file.
 				$value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php
 				$value9 = $_SESSION["value9"]; //value coming from dbregistracion.php
-
+				
+				if ($value1 == null) {         //select the value coming from dbiniciarseccion.php or dbregistracion.php
+					$value = $value9;
+				}elseif ($value9 == null){
+					$value = $value1;
+				}
+				
 			//Passing email value onto other .php file to keep open the session.
 				$_SESSION["value1"] = $value1;
 				$_SESSION["value9"] = $value9;
@@ -119,7 +125,7 @@
 				
 					<?php
 						 // query         		
-						 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
+						 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$value'";
 						 $result = $conn->query($sql);
 							
 						 if ($result->num_rows > 0) {
@@ -145,7 +151,7 @@
 					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
 						<?php 
 							// query							
-							$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
+							$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$value'";
 							$result = $conn->query($sql);
 							 
 							if ($result->num_rows > 0)
@@ -162,10 +168,10 @@
 						?>						
 					</div>
 					
-					<div class="six columns right"> <!-- Lado dereco de la pantalla -->
+					<div class="six columns right"> <!-- Lado derecho de la pantalla -->
 						<?php		        
 							// query							
-							$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
+							$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value'";
 							$result = $conn->query($sql);
 							 
 							if ($result->num_rows > 0)

@@ -128,26 +128,28 @@
 						<select name="name">						
 						<?php	        
  							// query y selecion de nombre y apellido en un dropdown list         		
-						 	$sql = "SELECT nombre, apellidopaterno, email FROM informacionpersonal";
+						 	$sql = "SELECT nombre, apellidopaterno, email FROM informacionpersonal ORDER BY nombre, apellidopaterno";
 						 	$result = $conn->query($sql);
 						 							
-							 if ($result->num_rows > 0) {
+							 if ($result->num_rows > 0) {							 	
 								// output data of each row						 	
 								while($row = $result->fetch_assoc())
-								{																		
-									echo "<option value='" . $row['nombre'] , $row["apellidopaterno"] . "'>" . $row['nombre']  , " " , $row["apellidopaterno"] . "</option>";
-								}
-							 }
-							  else
-							 {
-								echo "No hay datos";	
-							 }
+								{									
+									echo "<option value='" . $row['email'] . "'>" . $row['nombre']  , " " , $row["apellidopaterno"] . "</option>";
+								}									
+								 }
+								  else
+								 {
+									echo "No hay datos";	
+								 }
 							 
-							 //Getting data from iniciarseccion.php
-							 $value1 = $_POST['email'];
-							 $value2 = md5($_POST['password']);					 
+							 //Passing data to dbiniciarseccion.php
+							 //$_POST['email'] = $value1;
+							 //$_POST['password'] = $value2;
+							 													 					 
 							 
-											
+							 session_destroy();
+							 $conn->close();
 						 ?>	
 						 </select>					
 					</div>
