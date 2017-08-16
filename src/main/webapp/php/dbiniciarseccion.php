@@ -38,25 +38,12 @@
 			}
 			elseif ($value3)
 			{
-				//header('Location: /perfilinfo.php');
-				echo $value1;
-				 echo " --- ";
-				 echo $value2;
-				 echo " --- ";
-				 echo $value3;
-				 echo " --- ";
-				echo $value;
+				header('Location: /perfilinfo.php');
+				
 			}
 			elseif ($result -> num_rows > 0)		
 			{
-				//header('Location: /perfilinfo.php');
-				/*echo $value1;
-				echo " --- ";
-				echo $value2;
-				echo " --- ";
-				echo $value3;
-				echo " --- ";
-				echo $value;*/			  				
+				header('Location: /perfilinfo.php');							  				
 			}			 
 			else
 			{
@@ -70,6 +57,6 @@
 				echo $value;*/
 			}
 		
-		session_destroy();
+		//session_destroy();
 		$conn->close();
 ?>

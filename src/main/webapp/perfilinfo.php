@@ -107,12 +107,23 @@
 			//Getting other value from other php file.
 				$value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php
 				$value9 = $_SESSION["value9"]; //value coming from dbregistracion.php
+				$value3 = $_SESSION["value3"]; //value coming from dbiniciarseccion.php (admin profile)
 				
-				if ($value1 == null) {         //select the value coming from dbiniciarseccion.php or dbregistracion.php
-					$value = $value9;
-				}elseif ($value9 == null){
+				if ($value1 == null && $value9 == null) {         //select the value coming from dbiniciarseccion.php or dbregistracion.php
+					$value = $value3;
+				}elseif ($value9 == null && $value3 == null){
 					$value = $value1;
+				}else{
+					$value = $value9;
 				}
+				 /*echo " Valor de entrada normal: ";
+				 echo $value1;
+				 echo " Valor de registracion: ";
+				 echo $value9;
+				 echo " Valor del admin: ";
+				 echo $value3;
+				 echo " Valor select: ";
+				 echo $value;*/
 				
 			//Passing email value onto other .php file to keep open the session.
 				$_SESSION["value1"] = $value1;
