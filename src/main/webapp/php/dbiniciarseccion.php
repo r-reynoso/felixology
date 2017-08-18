@@ -38,7 +38,7 @@
 			}
 			elseif ($value3)
 			{
-				header('Location: /perfilinfo.php');
+				header('Location: /admin.php');
 				
 			}
 			elseif ($result -> num_rows > 0)		
