@@ -122,9 +122,7 @@
 			 
 					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->					
 						<label>Seleccione nombre del cliente:</label>												
-					</div>
 					
-					<div class="six columns right"> <!-- Lado dereco de la pantalla -->
 						<select name="name">						
 						<?php	        
  							// query y selecion de nombre y apellido en un dropdown list         		
@@ -147,13 +145,13 @@
 						 </select>
 						 
 						 <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Submit">Selecionar</button>						 
-						 <br>
 						 				
-					</div>	
-					
-					<hr>																	
+					</div>
+									
+					<hr>
 								
-				</div>			
+				</div>	
+						
 								  		 
 	   </form>	
 	   
@@ -201,8 +199,8 @@
 						 if ($result->num_rows > 0) {
 							// output data of each row
 							while($row = $result->fetch_assoc()) {							
-								echo "<hr>";
 								echo $row["nombre"]. "  " . $row["apellidopaterno"]. "  " . $row["apellidomaterno"] ;
+								echo "<hr>";
 							}
 						 } else {
 							
@@ -214,8 +212,8 @@
 			  </div> <!-- Row End-->
 				
 			  <div class="row add-bottom">		  				
-						  
-				<div id="Perfil" class="tabcontent"> 
+			  
+			  <div id="Perfil" class="tabcontent"> 
 			 
 					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
 						<?php 
