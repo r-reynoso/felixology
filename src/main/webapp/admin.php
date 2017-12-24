@@ -148,7 +148,7 @@
 						 				
 					</div>
 									
-					<hr>
+				<hr>
 								
 				</div>	
 						
@@ -235,7 +235,7 @@
 						?>						
 					</div>
 					
-					<div class="six columns right"v> <!-- Lado derecho de la pantalla -->
+					<div class="six columns right"> <!-- Lado derecho de la pantalla -->
 						<?php		        
 							// query							
 							$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value'";
@@ -255,7 +255,7 @@
 									$imcf = number_format((float)$imc,1);
 									
 									echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;
-									echo "<hr>";
+									
 								}
 							}
 							else
@@ -268,7 +268,9 @@
 						?>						
 					</div>
 					
-				</div>			
+				</div>	
+						
+			<hr>
 			
 			</form>				
 								  
