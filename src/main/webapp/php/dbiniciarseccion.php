@@ -3,9 +3,9 @@
 		session_start();
 
      	// Database conection configuration
-		$servername = "10.30.84.161";
-		$username = "rayaera";
-		$password = "Maricela1765";
+		$servername = "127.0.0.1";
+		$username = "root";
+		$password = "";
 		$database = "registracion";
 
 		// database connection error handeler

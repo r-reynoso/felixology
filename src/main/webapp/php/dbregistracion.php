@@ -2,10 +2,12 @@
 		//Starting all of the variables connections in and out of this php page.
 		session_start();
 		
+		//include('dbconnection.php');
+		
 		// Database conection configuration
-		$servername = "10.30.84.161";
-		$username = "rayaera";
-		$password = "Maricela1765";
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
 		$database = "registracion";
 		
 		// database connection error handeler
