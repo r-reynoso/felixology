@@ -88,20 +88,8 @@
 	   <section id="styles" style="padding: 90px 0 72px; background: #fff;">
 	   <form class="form-horizontal" action="php/dbiniciarseccion.php" method="post" enctype="multipart/form-data">
 		  <?php		  
-			// Database conection configuration
-				$servername = "10.30.84.161";
-				$username = "rayaera";
-				$password = "Maricela1765";
-				$database = "registracion";
-				  
-			// database connection error handeler
-				$conn = mysqli_connect($servername, $username, $password, $database);
-				if (!$conn)
-				{
-				header('Location: /errorconn.html');
-				exit;
-				}
-			
+		      //Database conection
+		      include('dbconnection.php');
 		  ?>  
 
 			  <div class="row section-head"> <!-- Admin -->

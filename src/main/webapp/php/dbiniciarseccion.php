@@ -1,22 +1,9 @@
 <?php
 		//Starting all of the variables connections in and out of this php page.
 		session_start();
-
-     	// Database conection configuration
-		$servername = "127.0.0.1";
-		$username = "root";
-		$password = "";
-		$database = "registracion";
-
-		// database connection error handeler
-		$conn = mysqli_connect($servername, $username, $password, $database);
-			if (!$conn)
-				{
-					header('Location: /errorconn.html');
-					exit;
-				}
-			
-		//----------------------------------------------------------------------------
+		
+		//Database conection
+		include('dbconnection.php'); 
 		
 		//Getting data from iniciarseccion.php
 		$value1 = $_POST['email'];
@@ -47,16 +34,8 @@
 			}			 
 			else
 			{
-				header('Location: /iniciarseccionerror.php');
-				/*echo $value1;
-				echo " --- ";
-				echo $value2;
-				echo " --- ";
-				echo $value3;
-				echo " --- ";
-				echo $value;*/
-			}
+				header('Location: /iniciarseccionerror.php');				
+			}		
 		
-		//session_destroy();
 		$conn->close();
 ?>
