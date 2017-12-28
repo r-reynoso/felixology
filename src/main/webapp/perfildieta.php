@@ -91,7 +91,7 @@
 	   
 		  <?php		  
 		    //Database conection
-		      include('dbconnection.php');
+		      include('php/dbconnection.php');
 				
 			//Getting other value from other php file.
 				$value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php

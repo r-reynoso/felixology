@@ -1,3 +1,7 @@
+<?php 
+    //Starting all of the variables connections in and out of this php page.
+    session_start()
+?>
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
@@ -84,26 +88,9 @@
 	  
 	   <section id="styles" style="padding: 90px 0 72px; background: #fff;">
 	   
-		  <?php
-	  		//Starting all of the variables connections in and out of this php page.
-		  		session_start();
-		  
+		  <?php		  
 		    //Database conection
-		        //include('dbconnection.php');
-		        
-		  		// Database conection configuration
-		  		$servername = "localhost";
-		  		$username = "root";
-		  		$password = "";
-		  		$database = "registracion";
-		  		
-		  		// database connection error handeler
-		  		$conn = mysqli_connect($servername, $username, $password, $database);
-		  		if (!$conn)
-		  		{
-		  			header('Location: /errorconn.html');
-		  			exit;
-		  		}
+		        include('php/dbconnection.php');		  		
 				
 			//Getting other value from other php file.
 				$value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php

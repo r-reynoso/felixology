@@ -1,6 +1,6 @@
 <?php
-	//Starting all of the variables connections in and out of this php page.
-	session_start();
+    //Starting all of the variables connections in and out of this php page.
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +89,7 @@
 	   <form class="form-horizontal" action="php/dbiniciarseccion.php" method="post" enctype="multipart/form-data">
 		  <?php		  
 		      //Database conection
-		      include('dbconnection.php');
+		      include('php/dbconnection.php');
 		  ?>  
 
 			  <div class="row section-head"> <!-- Admin -->
