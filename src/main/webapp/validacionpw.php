@@ -132,7 +132,7 @@
 
    
    <!-- Footer
-   ================================================== -->
+   ================================================== 
    <footer>
 
       <div class="row">         
@@ -179,7 +179,7 @@
                   </ul>
                </div>
 
-            </div> <!-- Nested Row End -->
+            </div> 
 
          </div>
 
@@ -189,7 +189,7 @@
             <a class="smoothscroll" title="Back to Top" href="#features"><i class="icon-up-open"></i></a>
          </div>
 
-      </div> <!-- Row End -->
+      </div> 
 
    </footer> <!-- Footer End--> 
 

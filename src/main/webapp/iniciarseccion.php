@@ -57,11 +57,11 @@
       <nav id="nav-wrap">         
          
          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
-	     <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>         
-
-         <ul id="nav" class="nav">
-            
-         </ul> <!-- end #nav -->
+	     <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+	     
+	     <ul id="nav" class="nav">
+            <li><a href="index.html">Página Principal</a></li>
+         </ul> <!-- end #nav -->        
 
       </nav> <!-- end #nav-wrap -->
 
