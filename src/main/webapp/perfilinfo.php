@@ -194,7 +194,7 @@
 								echo "No hay datos";
 							}
 							
-							//session_destroy();
+							session_destroy();
 							$conn->close();							
 						?>						
 					</div>

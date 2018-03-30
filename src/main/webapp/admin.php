@@ -1,6 +1,6 @@
 <?php
     //Starting all of the variables connections in and out of this php page.
-    session_start();
+    session_start();    
 ?>
 
 <!DOCTYPE html>
@@ -127,8 +127,8 @@
 								  else
 								 {
 									echo "No hay datos";	
-								 }	 
-							 
+								 }									 
+								 
 						 ?>	
 						 </select>
 						 
@@ -136,7 +136,7 @@
 						 				
 					</div>
 									
-				<hr>
+					<hr>
 								
 				</div>	
 						
@@ -189,6 +189,7 @@
 							while($row = $result->fetch_assoc()) {							
 								echo $row["nombre"]. "  " . $row["apellidopaterno"]. "  " . $row["apellidomaterno"] ;
 								echo "<hr>";
+								echo "";
 							}
 						 } else {
 							
@@ -196,7 +197,7 @@
 					?>
 					
 				</h2>
-
+				
 			  </div> <!-- Row End-->
 				
 			  <div class="row add-bottom">		  				
@@ -258,7 +259,7 @@
 					
 				</div>	
 						
-			<hr>
+			
 			
 			</form>				
 								  

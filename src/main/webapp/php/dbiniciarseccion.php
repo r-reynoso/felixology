@@ -1,6 +1,6 @@
 <?php
 		//Starting all of the variables connections in and out of this php page.
-		session_start();
+		session_start();		
 		
 		//Database conection
 		include('dbconnection.php'); 
