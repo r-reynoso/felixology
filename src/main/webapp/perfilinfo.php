@@ -192,16 +192,18 @@
 							else
 							{
 								echo "No hay datos";
-							}
-							
-							session_destroy();
-							$conn->close();							
+							}	
+
+							//session_destroy();
+							$conn->close();
+														
 						?>						
 					</div>
 					
 				</div>
 								   
-				<hr>		  		 
+				<hr>				
+						  		 
 			  
 	   </section> <!-- Style Guide Section End-->	  
 	    

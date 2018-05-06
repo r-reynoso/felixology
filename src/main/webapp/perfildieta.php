@@ -148,7 +148,7 @@
 					
 				</div>
 								   
-				<hr>		  		 
+						  		 
 			  
 	   </section> <!-- Style Guide Section End-->	  
 	    

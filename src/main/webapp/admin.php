@@ -89,7 +89,8 @@
 	   <form class="form-horizontal" action="php/dbiniciarseccion.php" method="post" enctype="multipart/form-data">
 		  <?php		  
 		      //Database conection
-		      include('php/dbconnection.php');
+		      include('php/dbconnection.php');		      
+		      
 		  ?>  
 
 			  <div class="row section-head"> <!-- Admin -->
@@ -117,22 +118,20 @@
 						 	$sql = "SELECT nombre, apellidopaterno, email FROM informacionpersonal ORDER BY nombre, apellidopaterno";
 						 	$result = $conn->query($sql);
 						 							
-							 if ($result->num_rows > 0) {							 	
-								// output data of each row						 	
-								while($row = $result->fetch_assoc())
-								{									
-									echo "<option value='" . $row['email'] . "'>" . $row['nombre']  , " " , $row["apellidopaterno"] . "</option>";
-								}									
-								 }
-								  else
-								 {
-									echo "No hay datos";	
-								 }									 
+							 if ($result->num_rows > 0)
+							  	{							 	
+									// output data of each row						 	
+									while($row = $result->fetch_assoc())
+									{									
+										echo "<option value='" . $row['email'] . "'>" . $row['nombre']  , " " , $row["apellidopaterno"] . "</option>";									
+									}									
+							 	}								 									 
 								 
 						 ?>	
 						 </select>
-						 
-						 <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Submit">Selecionar</button>						 
+						 						 
+						 <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Submit">Selecionar</button>							 
+						 				 
 						 				
 					</div>
 									
@@ -191,8 +190,10 @@
 								echo "<hr>";
 								echo "";
 							}
-						 } else {
-							
+						 }
+						  else 
+						 {
+						 	
 						 }
 					?>
 					
@@ -222,7 +223,7 @@
 								
 							}						
 						?>						
-					</div>
+					</div>					
 					
 					<div class="six columns right"> <!-- Lado derecho de la pantalla -->
 						<?php		        
@@ -244,17 +245,19 @@
 									$imcf = number_format((float)$imc,1);
 									
 									echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;
-									
+									echo '<label>Asistencia:</label>';
 								}
 							}
 							else
 							{
 								
-							}
+							}	
 							
-							session_destroy();
-							$conn->close();							
-						?>						
+							//session_destroy();
+							$conn->close();
+							
+						?>	
+											
 					</div>
 					
 				</div>	
@@ -262,6 +265,7 @@
 			
 			
 			</form>				
+					
 								  
 	   </section> <!-- Style Guide Section End-->    
 	    
@@ -285,4 +289,3 @@
 	</body>
 
 </html>
-
