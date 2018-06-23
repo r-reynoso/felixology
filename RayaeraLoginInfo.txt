@@ -17,3 +17,9 @@ Password: Maricela1765
 The following intormation is for your github.com credentials:
 Username: r-reynoso@live.com
 Password: maricela1765
+-----------------------------------------------------------
+ // Database conection configuration
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "registracion";

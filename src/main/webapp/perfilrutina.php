@@ -132,6 +132,7 @@
 				<div id="Perfil" class="tabcontent"> 
 			 
 					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
+						<a href="Test\test - Storyline output\story.html" title="¿Quieres iniciar? Entrar aquí.">Iniciar sesión</a>
 						<?php 
 							echo"Rutina";					
 						?>						
