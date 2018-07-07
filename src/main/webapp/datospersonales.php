@@ -1,8 +1,7 @@
-<?php
-	//Starting all of the variables connections in and out of this php page.
-	session_start();
+<?php 
+    //Starting all of the variables connections in and out of this php page.
+    session_start()
 ?>
-
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
@@ -69,8 +68,7 @@
 			 <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
 			 <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
 			 <ul id="nav" class="nav">
-			 	<li><a href="perfilinfo.php">Informacion</a></li>
-			 	<li><a href="perfildieta.php">Dieta</a></li>
+			 	<li><a href="perfilinfo.php">Informacion</a></li>			 	
 				<li><a href="php/salir.php">Salir</a></li>
 			 </ul> <!-- end #nav -->
 		  </nav> <!-- end #nav-wrap -->
@@ -91,12 +89,21 @@
 	   
 		  <?php		  
 		    //Database conection
-		        include('php/dbconnection.php');
+		        include('php/dbconnection.php');		  		
 				
 			//Getting other value from other php file.
 				$value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php
-				$value9 = $_SESSION["value9"]; //value coming from dbregistracion.php	
-
+				$value9 = $_SESSION["value9"]; //value coming from dbregistracion.php
+				$value3 = $_SESSION["value3"]; //value coming from dbiniciarseccion.php (admin profile)
+				
+				if ($value1 == null && $value9 == null) {         //select the value coming from dbiniciarseccion.php or dbregistracion.php
+					$value = $value3;
+				}elseif ($value9 == null && $value3 == null){
+					$value = $value1;
+				}else{
+					$value = $value9;
+				}				 
+				
 			//Passing email value onto other .php file to keep open the session.
 				$_SESSION["value1"] = $value1;
 				$_SESSION["value9"] = $value9;
@@ -108,7 +115,7 @@
 				
 					<?php
 						 // query         		
-						 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$value1' OR email = '$value9' ";
+						 $sql = "SELECT nombre, apellidopaterno, apellidomaterno, email FROM informacionpersonal WHERE email = '$value'";
 						 $result = $conn->query($sql);
 							
 						 if ($result->num_rows > 0) {
@@ -127,29 +134,86 @@
 				
 			  <div class="row add-bottom">
 			  
-			  	<hr>				
+			  	<hr>			  					
 						  
 				<div id="Perfil" class="tabcontent"> 
 			 
-					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->						
+					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
+					<label>Cambiar Datos Personales</label>
 						<?php 
-							echo"Rutina";
+							// query
+							$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value'";
+							$result = $conn->query($sql);
 							
-						?>						
+							if ($result->num_rows > 0)
+							{
+								// output data of each row
+								while($row = $result->fetch_assoc()) {
+										
+									$pies = $row["pies"];                    //Cojer data de la base de datos y enviarlo a una variable
+									$pulgadas = $row["pulgadas"];
+									$peso = $row["peso"];
+										
+									$altura = $pies * 12 + $pulgadas;		 //Calcular indice de masa corporal.
+									$imc = ($peso / pow($altura,2)) * 703;
+									$imcf = number_format((float)$imc,1);
+										
+									echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;
+								}
+							}
+							else
+							{
+								echo "No hay datos";
+							}							
+						?>		
+							  
+												
 					</div>
 					
-					<div class="six columns right"> <!-- Lado dereco de la pantalla -->
-						<?php		        
-							echo"Rutina";
+							<?php  								
+								//session_destroy();
+								$conn->close();							
+							?>	
+					
+					<div class="six columns right"> <!-- Lado derecho de la pantalla -->
+					
+						<form class="form-horizontal" action="php/datospersonales.php" method="post" enctype="multipart/form-data">
+						
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="estatura">Estatura</label>  
+							  <div class="col-md-4">
+							  <span class="help-block">Pies:</span>
+							  <input id="pies" name="pies" type="number" min="3" max="7" class="form-control input-md" required="">
+							  <span class="help-block">Pulgadas:</span>
+							  <input id="pulgadas" name="pulgadas" type="number" min="0" max="11" class="form-control input-md" required="">					    
+							  </div>
+							</div>
+		
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="peso">Peso</label>  
+							  <div class="col-md-4">
+							  <span class="help-block">Libras:</span>
+							  <input id="peso" name="peso" type="number" min="20" max="500" class="form-control input-md" required="">
+							  </div>
+							</div>
 							
-							//session_destroy();
-							$conn->close();							
-						?>						
+							<!-- Button -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="singlebutton"></label>
+							  <div class="col-md-4">
+							    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Submit">Cambiar</button>
+							    <input type="reset" value="Borrar datos">
+							  </div>
+							</div>
+							
+						</form>
+																									
 					</div>
 					
-				</div>
-								   
-						  		 
+				</div>								   
+					  		 
 			  
 	   </section> <!-- Style Guide Section End-->	  
 	    

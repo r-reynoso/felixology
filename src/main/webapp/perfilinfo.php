@@ -104,15 +104,7 @@
 				}else{
 					$value = $value9;
 				}
-				 /*echo " Valor de entrada normal: ";
-				 echo $value1;
-				 echo " Valor de registracion: ";
-				 echo $value9;
-				 echo " Valor del admin: ";
-				 echo $value3;
-				 echo " Valor select: ";
-				 echo $value;*/
-				
+								
 			//Passing email value onto other .php file to keep open the session.
 				$_SESSION["value1"] = $value1;
 				$_SESSION["value9"] = $value9;
@@ -192,18 +184,24 @@
 							else
 							{
 								echo "No hay datos";
-							}	
-
+							}
+							
 							//session_destroy();
-							$conn->close();
+							$conn->close();							
+						?>	
+							
 														
-						?>						
+							  <label class="col-md-4 control-label" for="Cambiar Datos Personales"></label>
+							  <div class="col-md-4">							    
+							    <a href="datospersonales.php">Cambiar Datos Personales</a>					    							   						    
+							  </div>					  
+							  
+											
 					</div>
 					
 				</div>
 								   
-				<hr>				
-						  		 
+				<hr>		  		 
 			  
 	   </section> <!-- Style Guide Section End-->	  
 	    
