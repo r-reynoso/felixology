@@ -139,34 +139,25 @@
 				<div id="Perfil" class="tabcontent"> 
 			 
 					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
-					<label>Cambiar Datos Personales</label>
+					<label>Cambiar Foto</label>
 						<?php 
-							// query
-							$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value'";
+							 
+							// query							
+							$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$value'";
 							$result = $conn->query($sql);
-							
+							 
 							if ($result->num_rows > 0)
 							{
 								// output data of each row
 								while($row = $result->fetch_assoc()) {
-										
-									$pies = $row["pies"];                    //Cojer data de la base de datos y enviarlo a una variable
-									$pulgadas = $row["pulgadas"];
-									$peso = $row["peso"];
-										
-									$altura = $pies * 12 + $pulgadas;		 //Calcular indice de masa corporal.
-									$imc = ($peso / pow($altura,2)) * 703;
-									$imcf = number_format((float)$imc,1);
-										
-									echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;
-								}
+									echo '<img src="data:image/jpeg;base64,'.base64_encode($row['imagen'] ).'" width="200" height="200"/>';
+								}							 
 							}
 							else
 							{
 								echo "No hay datos";
-							}							
-						?>		
-							  
+							}						
+						?>							  
 												
 					</div>
 					
@@ -177,34 +168,32 @@
 					
 					<div class="six columns right"> <!-- Lado derecho de la pantalla -->
 					
-						<form class="form-horizontal" action="php/dbdatospersonales.php" method="post" enctype="multipart/form-data">
+						<form class="form-horizontal" action="php/dbcambiarfoto.php" method="post" enctype="multipart/form-data">
 						
-							<!-- Text input-->
-							<div class="form-group">
-							  <label class="col-md-4 control-label" for="estatura">Estatura</label>  
-							  <div class="col-md-4">
-							  <span class="help-block">Pies:</span>
-							  <input id="pies" name="pies" type="number" min="3" max="7" class="form-control input-md" required="">
-							  <span class="help-block">Pulgadas:</span>
-							  <input id="pulgadas" name="pulgadas" type="number" min="0" max="11" class="form-control input-md" required="">					    
-							  </div>
-							</div>
-		
-							<!-- Text input-->
-							<div class="form-group">
-							  <label class="col-md-4 control-label" for="peso">Peso</label>  
-							  <div class="col-md-4">
-							  <span class="help-block">Libras:</span>
-							  <input id="peso" name="peso" type="number" min="20" max="500" class="form-control input-md" required="">
-							  </div>
-							</div>
+							<!-- File Button --> 
+   								<div class="form-group">
+					  			<label class="col-md-4 control-label" for="filebutton">Seleccionar Foto</label>
+				  				<div class="col-md-4">
+				    			<input type="file" name="imagen" onchange="loadFile(event)" accept="image/*" required="">
+					    		<img id="imagen"/>
+						    <script>
+								var loadFile = function(event) //Preview the image before sudmit
+								  {
+								    var output = document.getElementById('imagen');
+								    imagen.style.height = '400px';
+								    imagen.style.width = '300px';
+								    output.src = URL.createObjectURL(event.target.files[0]);
+								  };
+							</script>
+					  </div>
+					</div>
 							
 							<!-- Button -->
 							<div class="form-group">
 							  <label class="col-md-4 control-label" for="singlebutton"></label>
 							  <div class="col-md-4">
 							    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Submit">Cambiar</button>
-							    <input type="reset" value="Borrar datos">
+							    
 							  </div>
 							</div>
 							

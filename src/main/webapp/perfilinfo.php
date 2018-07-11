@@ -88,10 +88,11 @@
 	  
 	   <section id="styles" style="padding: 90px 0 72px; background: #fff;">
 	   
-		  <?php		  
-		    //Database conection
-		        include('php/dbconnection.php');		  		
-				
+	   <?php
+	   
+		   	//Database conection
+	   			include('php/dbconnection.php');		  		
+		        
 			//Getting other value from other php file.
 				$value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php
 				$value9 = $_SESSION["value9"]; //value coming from dbregistracion.php
@@ -104,11 +105,12 @@
 				}else{
 					$value = $value9;
 				}
-								
+				
 			//Passing email value onto other .php file to keep open the session.
-				$_SESSION["value1"] = $value1;
-				$_SESSION["value9"] = $value9;
-		  ?>  
+				$_SESSION["value1"] = $value;
+				$_SESSION["value9"] = $value;  
+				
+		?>  
 
 			  <div class="row section-head"> <!-- Nombre del usuario -->
 
@@ -190,18 +192,21 @@
 							$conn->close();							
 						?>	
 							
+							  <label class="col-md-4 control-label" for="Cambiar Datos Personales"></label>
+							  <div class="col-md-4">							    
+							    <a href="cambiarfoto.php">Cambiar Foto</a>					    							   						    
+							  </div>
 														
 							  <label class="col-md-4 control-label" for="Cambiar Datos Personales"></label>
 							  <div class="col-md-4">							    
 							    <a href="datospersonales.php">Cambiar Datos Personales</a>					    							   						    
-							  </div>					  
-							  
+							  </div>						  
 											
 					</div>
 					
 				</div>
 								   
-				<hr>		  		 
+					  		 
 			  
 	   </section> <!-- Style Guide Section End-->	  
 	    

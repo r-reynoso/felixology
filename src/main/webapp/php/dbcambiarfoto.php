@@ -6,19 +6,17 @@
 		include('dbconnection.php');
 
 		//Getting other value from other php file.		
-		$value9 = $_SESSION["value9"]; //value coming from datospersonales.php	
+		$value9 = $_SESSION["value9"]; //value coming from cambiarfoto.php	
 						
 		//Incert data into database	
-		//Getting values form datospersonales.php		
-		$value6 = $_POST['pies'];
-		$value7 = $_POST['pulgadas'];
-		$value8 = $_POST['peso'];
+		//Getting values form cambiarfoto.php		
+		$value16 = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 				
 		//Passing email value onto perfil.php for the query data selection.		
 		$_SESSION["value9"] = $value9;		
 		
 		//Querry update data into database								
-		$sql = "UPDATE informacionpersonal SET pies = '$value6', pulgadas = '$value7', peso = '$value8' WHERE email = 'r-reynoso@live.com'";
+		$sql = "UPDATE informacionpersonal SET imagen = '$value16' WHERE email = '$value9'";
 		
 		//Notification of record created successfully or not and if there is an existin record.
 		
