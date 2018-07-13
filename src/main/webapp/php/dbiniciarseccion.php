@@ -29,8 +29,8 @@
 				
 			}
 			elseif ($result -> num_rows > 0)		
-			{
-				header('Location: /perfilinfo.php');							  				
+			{			    
+				header('Location: /perfilinfo.php');				
 			}			 
 			else
 			{
