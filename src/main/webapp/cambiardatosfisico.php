@@ -68,7 +68,8 @@
 			 <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
 			 <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
 			 <ul id="nav" class="nav">
-			 	<li><a href="perfilinfo.php">Informacion</a></li>			 	
+			 	<li><a href="perfilinfo.php">Perfil</a></li>
+			 	<li><a href="ajustes.php">Ajustes</a></li>			 	
 				<li><a href="php/salir.php">Salir</a></li>
 			 </ul> <!-- end #nav -->
 		  </nav> <!-- end #nav-wrap -->
@@ -142,14 +143,14 @@
 					<label>Cambiar Datos Personales</label>
 						<?php 
 							// query
-							$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value'";
+							$sql = "SELECT genero, fechanacimiento, pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value'";
 							$result = $conn->query($sql);
 							
 							if ($result->num_rows > 0)
 							{
 								// output data of each row
 								while($row = $result->fetch_assoc()) {
-										
+									
 									$pies = $row["pies"];                    //Cojer data de la base de datos y enviarlo a una variable
 									$pulgadas = $row["pulgadas"];
 									$peso = $row["peso"];
@@ -158,7 +159,7 @@
 									$imc = ($peso / pow($altura,2)) * 703;
 									$imcf = number_format((float)$imc,1);
 										
-									echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;
+									echo "Genero = ".  $row["genero"] . "<br>" . "Fecha de nacimiento = ".  $row["fechanacimiento"] . "<br>" .  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;
 								}
 							}
 							else
@@ -178,6 +179,25 @@
 					<div class="six columns right"> <!-- Lado derecho de la pantalla -->
 					
 						<form class="form-horizontal" action="php/dbdatospersonales.php" method="post" enctype="multipart/form-data">
+						
+							<!-- Select Basic -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="genero">Genero</label>
+							  <div class="col-md-4">
+								<select id="genero" name="genero" class="form-control">
+								  <option value="Masculino">Masculino</option>
+								  <option value="Femenino">Femenino</option>
+								</select>
+							  </div>
+							</div>
+		
+							<!-- Text input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="fechanacimiento">Fecha Nacimiento</label>  
+							  <div class="col-md-4">
+							  <input id="fechanacimiento" name="fechanacimiento" type="date" class="form-control input-md" required="">						
+							  </div>
+							</div>
 						
 							<!-- Text input-->
 							<div class="form-group">

@@ -69,7 +69,8 @@
 			 <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
 			 <ul id="nav" class="nav">
 			 	<li><a href="perfilinfo.php">Perfil</a></li>
-			 	<li><a href="ajustes.php">Ajustes</a></li>			 	
+			 	<li><a href="perfilrutina.php">Rutinas</a></li>
+			 	<li><a href="perfildieta.php">Dieta</a></li>			 			 	
 				<li><a href="php/salir.php">Salir</a></li>
 			 </ul> <!-- end #nav -->
 		  </nav> <!-- end #nav-wrap -->
@@ -88,10 +89,11 @@
 	  
 	   <section id="styles" style="padding: 90px 0 72px; background: #fff;">
 	   
-		  <?php		  
-		    //Database conection
-		        include('php/dbconnection.php');		  		
-				
+	   <?php
+	   
+		   	//Database conection
+	   			include('php/dbconnection.php');		  		
+		        
 			//Getting other value from other php file.
 				$value1 = $_SESSION["value1"]; //value coming from dbiniciarseccion.php
 				$value9 = $_SESSION["value9"]; //value coming from dbregistracion.php
@@ -103,12 +105,13 @@
 					$value = $value1;
 				}else{
 					$value = $value9;
-				}				 
+				}
 				
 			//Passing email value onto other .php file to keep open the session.
 				$_SESSION["value1"] = $value;
-				$_SESSION["value9"] = $value;
-		  ?>  
+				$_SESSION["value9"] = $value;  
+				
+		?>  
 
 			  <div class="row section-head"> <!-- Nombre del usuario -->
 
@@ -135,74 +138,51 @@
 				
 			  <div class="row add-bottom">
 			  
-			  	<hr>			  					
+			  	<hr>				
 						  
 				<div id="Perfil" class="tabcontent"> 
 			 
 					<div class="six columns add-bottom"> <!--lado izquerdo de la pantalla-->
-					<label>Cambiar Foto</label>
-						<?php 
-							 
-							// query							
-							$sql = "SELECT imagen, email FROM informacionpersonal WHERE email = '$value'";
-							$result = $conn->query($sql);
-							 
-							if ($result->num_rows > 0)
-							{
-								// output data of each row
-								while($row = $result->fetch_assoc()) {
-									echo '<img src="data:image/jpeg;base64,'.base64_encode($row['imagen'] ).'" width="200" height="200"/>';
-								}							 
-							}
-							else
-							{
-								echo "No hay datos";
-							}						
-						?>							  
-												
+						 <label>Menu De Ajustes</label>
+						 	
+						 <label class="col-md-4 control-label" for="Cambiar Nombre"></label>
+					     	<div class="col-md-4">							    
+					     		<a href="cambiarnombre.php">Cambiar Nombre</a>					    							   						    
+					     	</div>
+					     													
+				     	<label class="col-md-4 control-label" for="Cambiar Datos Fisico"></label>
+					     	<div class="col-md-4">							    
+					     		<a href="cambiardatosfisico.php">Cambiar Datos Fisico</a>					    							   						    
+						 	</div>	
+						 	
+						<label class="col-md-4 control-label" for="Cambiar Credenciales"></label>
+					     	<div class="col-md-4">							    
+					     		<a href="cambiarcredenciales.php">Cambiar Credenciales</a>					    							   						    
+						 	</div>
+						
+						<label class="col-md-4 control-label" for="Cambiar Datos Personales"></label>
+					     	<div class="col-md-4">							    
+					     		<a href="cambiardatospersonales.php">Cambiar Datos Personales</a>					    							   						    
+						 	</div>
+						
+						<label class="col-md-4 control-label" for="Cambiar Foto"></label>
+					     	<div class="col-md-4">							    
+					     		<a href="cambiarfoto.php">Cambiar Fotos</a>					    							   						    
+						 	</div> 	 	 				
 					</div>
-					
-							<?php  								
-								//session_destroy();
-								$conn->close();							
-							?>	
 					
 					<div class="six columns right"> <!-- Lado derecho de la pantalla -->
-					
-						<form class="form-horizontal" action="php/dbcambiarfoto.php" method="post" enctype="multipart/form-data">
-						
-							<!-- File Button --> 
-   								<div class="form-group">
-					  			<label class="col-md-4 control-label" for="filebutton">Seleccionar Foto</label>
-				  				<div class="col-md-4">
-				    			<input type="file" name="imagen" onchange="loadFile(event)" accept="image/*" required="">
-					    		<img id="imagen"/>
-						    <script>
-								var loadFile = function(event) //Preview the image before sudmit
-								  {
-								    var output = document.getElementById('imagen');
-								    imagen.style.height = '400px';
-								    imagen.style.width = '300px';
-								    output.src = URL.createObjectURL(event.target.files[0]);
-								  };
-							</script>
-					  </div>
-					</div>
+						<?php		        
 							
-							<!-- Button -->
-							<div class="form-group">
-							  <label class="col-md-4 control-label" for="singlebutton"></label>
-							  <div class="col-md-4">
-							    <button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Submit">Cambiar</button>
-							    
-							  </div>
-							</div>
 							
-						</form>
-																									
+							//session_destroy();
+							$conn->close();							
+						?>								 						  
+											
 					</div>
 					
-				</div>								   
+				</div>
+								   
 					  		 
 			  
 	   </section> <!-- Style Guide Section End-->	  

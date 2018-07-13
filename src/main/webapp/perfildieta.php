@@ -69,7 +69,7 @@
 			 <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
 			 <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
 			 <ul id="nav" class="nav">
-			 	<li><a href="perfilinfo.php">Informacion</a></li>
+			 	<li><a href="perfilinfo.php">Perfil</a></li>
 			 	<li><a href="perfilrutina.php">Rutinas</a></li>
 				<li><a href="php/salir.php">Salir</a></li>
 			 </ul> <!-- end #nav -->

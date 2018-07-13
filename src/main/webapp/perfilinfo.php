@@ -69,7 +69,8 @@
 			 <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
 			 <ul id="nav" class="nav">
 			 	<li><a href="perfilrutina.php">Rutinas</a></li>
-			 	<li><a href="perfildieta.php">Dieta</a></li>			 	
+			 	<li><a href="perfildieta.php">Dieta</a></li>
+			 	<li><a href="ajustes.php">Ajustes</a></li>			 	
 				<li><a href="php/salir.php">Salir</a></li>
 			 </ul> <!-- end #nav -->
 		  </nav> <!-- end #nav-wrap -->
@@ -163,24 +164,24 @@
 					
 					<div class="six columns right"> <!-- Lado derecho de la pantalla -->
 						<?php		        
-							// query							
-							$sql = "SELECT pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value'";
+// query
+							$sql = "SELECT genero, fechanacimiento, pies, pulgadas, peso, email FROM informacionpersonal WHERE email = '$value'";
 							$result = $conn->query($sql);
-							 
+							
 							if ($result->num_rows > 0)
 							{
 								// output data of each row
 								while($row = $result->fetch_assoc()) {
-															
+									
 									$pies = $row["pies"];                    //Cojer data de la base de datos y enviarlo a una variable
 									$pulgadas = $row["pulgadas"];
 									$peso = $row["peso"];
-									
+										
 									$altura = $pies * 12 + $pulgadas;		 //Calcular indice de masa corporal.
 									$imc = ($peso / pow($altura,2)) * 703;
 									$imcf = number_format((float)$imc,1);
-									
-									echo  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;									
+										
+									echo "Genero = ".  $row["genero"] . "<br>" . "Fecha de nacimiento = ".  $row["fechanacimiento"] . "<br>" .  " Medida = " . $row["pies"]. "' " . $row["pulgadas"]. "''  ". "<br>" . "Peso = ".  $row["peso"] . "<br>" . "Indice de masa corporal = " . $imcf . "<br> <br>" ;
 								}
 							}
 							else
@@ -190,17 +191,8 @@
 							
 							//session_destroy();
 							$conn->close();							
-						?>	
-							
-							  <label class="col-md-4 control-label" for="Cambiar Datos Personales"></label>
-							  <div class="col-md-4">							    
-							    <a href="cambiarfoto.php">Cambiar Foto</a>					    							   						    
-							  </div>
-														
-							  <label class="col-md-4 control-label" for="Cambiar Datos Personales"></label>
-							  <div class="col-md-4">							    
-							    <a href="datospersonales.php">Cambiar Datos Personales</a>					    							   						    
-							  </div>						  
+						?>					
+							  						  
 											
 					</div>
 					
