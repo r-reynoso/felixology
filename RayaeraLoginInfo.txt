@@ -6,7 +6,7 @@ Password: maricela1765
 The following information is your FTP Server credentials:
 Host/Server Name: 000369z.wcomhost.com
 Username: ftp2261392
-Password: Maricela21765
+Password: Maricela@1765.
 Directory/Path:/htdocs
 E-mail password = Maricela@1765
 -----------------------------------------------------------
